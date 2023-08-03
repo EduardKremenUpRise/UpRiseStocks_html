@@ -1,0 +1,769 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+    <style>
+        .matrix {
+            color: #FFFFFF;
+            background-color: #000000;
+        }
+        .matrix th {
+            background-color: #005500;
+        }
+        .matrix td, .matrix th {
+            text-align: center;  /* Center all the text in the cells */
+        }
+        ::-webkit-scrollbar {
+            width: 1em;
+        }
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: darkgreen;
+            outline: 1px solid #005500;
+        }
+        .container {
+            padding: 0;
+            max-width: 100%;
+        }
+        .profit {
+            color: limegreen;
+            font-weight: bold;
+        }
+        .stock-name {
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .matrix td, .matrix th {
+                font-size: 0.5em;  /* Decrease the font size */
+                padding: 0.2em;  /* Decrease cell padding */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="table-responsive">
+            <table id="table_id" class="display nowrap" style="width:100%">
+                <table border="1" class="dataframe table matrix">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Profit</th>
+      <th>Stock Name</th>
+      <th>Published Date</th>
+      <th>UpRiseScore</th>
+      <th>Days Until Max Profit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>176.65%</b></span></span></td>
+      <td><Span Class="Stock-Name">Smiledirectclub</Span></td>
+      <td>2023-06-09</td>
+      <td>71.7</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>163.70%</b></span></span></td>
+      <td><Span Class="Stock-Name">Xpeng</Span></td>
+      <td>2023-06-09</td>
+      <td>82.3</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>132.65%</b></span></span></td>
+      <td><Span Class="Stock-Name">Nikola Corporation</Span></td>
+      <td>2023-07-06</td>
+      <td>71.1</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>106.20%</b></span></span></td>
+      <td><Span Class="Stock-Name">Marathon Digital</Span></td>
+      <td>2023-06-15</td>
+      <td>73.0</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>103.21%</b></span></span></td>
+      <td><Span Class="Stock-Name">Sleep Number</Span></td>
+      <td>2023-06-06</td>
+      <td>75.4</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>101.15%</b></span></span></td>
+      <td><Span Class="Stock-Name">Opendoor</Span></td>
+      <td>2023-06-12</td>
+      <td>70.5</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>82.58%</b></span></span></td>
+      <td><Span Class="Stock-Name">Quantumscape</Span></td>
+      <td>2023-06-06</td>
+      <td>75.5</td>
+      <td>54</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>79.19%</b></span></span></td>
+      <td><Span Class="Stock-Name">Coinbase</Span></td>
+      <td>2023-06-23</td>
+      <td>71.9</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>78.03%</b></span></span></td>
+      <td><Span Class="Stock-Name">Vicor Corporation</Span></td>
+      <td>2023-07-06</td>
+      <td>71.7</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>69.71%</b></span></span></td>
+      <td><Span Class="Stock-Name">Wework</Span></td>
+      <td>2023-06-12</td>
+      <td>74.5</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>66.86%</b></span></span></td>
+      <td><Span Class="Stock-Name">Workhorse Group</Span></td>
+      <td>2023-06-28</td>
+      <td>91.8</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>66.59%</b></span></span></td>
+      <td><Span Class="Stock-Name">Lordstown Motors</Span></td>
+      <td>2023-06-27</td>
+      <td>97.9</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>65.44%</b></span></span></td>
+      <td><Span Class="Stock-Name">Faraday</Span></td>
+      <td>2023-06-05</td>
+      <td>77.3</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>65.14%</b></span></span></td>
+      <td><Span Class="Stock-Name">Rackspace</Span></td>
+      <td>2023-06-07</td>
+      <td>83.7</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>58.62%</b></span></span></td>
+      <td><Span Class="Stock-Name">Graphex</Span></td>
+      <td>2023-06-07</td>
+      <td>71.1</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>57.00%</b></span></span></td>
+      <td><Span Class="Stock-Name">Soundhound</Span></td>
+      <td>2023-06-09</td>
+      <td>74.9</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>54.04%</b></span></span></td>
+      <td><Span Class="Stock-Name">Sangoma Technologies Corporation</Span></td>
+      <td>2023-06-09</td>
+      <td>70.5</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>50.46%</b></span></span></td>
+      <td><Span Class="Stock-Name">Canopy Growth Corporation</Span></td>
+      <td>2023-06-28</td>
+      <td>72.7</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>49.27%</b></span></span></td>
+      <td><Span Class="Stock-Name">Kingsoft</Span></td>
+      <td>2023-06-08</td>
+      <td>73.0</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>48.72%</b></span></span></td>
+      <td><Span Class="Stock-Name">Inovio Pharmaceuticals</Span></td>
+      <td>2023-06-28</td>
+      <td>91.9</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>47.64%</b></span></span></td>
+      <td><Span Class="Stock-Name">Codexis</Span></td>
+      <td>2023-06-09</td>
+      <td>79.7</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>42.21%</b></span></span></td>
+      <td><Span Class="Stock-Name">Bright Health</Span></td>
+      <td>2023-06-06</td>
+      <td>85.4</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>41.53%</b></span></span></td>
+      <td><Span Class="Stock-Name">Coherent Corp.</Span></td>
+      <td>2023-06-07</td>
+      <td>70.1</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>38.18%</b></span></span></td>
+      <td><Span Class="Stock-Name">Varta</Span></td>
+      <td>2023-06-09</td>
+      <td>74.6</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>38.13%</b></span></span></td>
+      <td><Span Class="Stock-Name">Battalion</Span></td>
+      <td>2023-07-11</td>
+      <td>71.5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>38.10%</b></span></span></td>
+      <td><Span Class="Stock-Name">Gray Television</Span></td>
+      <td>2023-06-22</td>
+      <td>71.6</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>37.02%</b></span></span></td>
+      <td><Span Class="Stock-Name">Canoo</Span></td>
+      <td>2023-06-09</td>
+      <td>70.6</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>36.26%</b></span></span></td>
+      <td><Span Class="Stock-Name">Novavax</Span></td>
+      <td>2023-07-06</td>
+      <td>78.7</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>35.46%</b></span></span></td>
+      <td><Span Class="Stock-Name">Energy Vault</Span></td>
+      <td>2023-06-05</td>
+      <td>72.7</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>30.78%</b></span></span></td>
+      <td><Span Class="Stock-Name">Medifast</Span></td>
+      <td>2023-06-13</td>
+      <td>73.5</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>30.65%</b></span></span></td>
+      <td><Span Class="Stock-Name">Carparts.Com</Span></td>
+      <td>2023-06-09</td>
+      <td>72.8</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>30.13%</b></span></span></td>
+      <td><Span Class="Stock-Name">Allogene Therapeutics</Span></td>
+      <td>2023-06-29</td>
+      <td>88.2</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>30.08%</b></span></span></td>
+      <td><Span Class="Stock-Name">American Public University System</Span></td>
+      <td>2023-06-20</td>
+      <td>72.4</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>29.62%</b></span></span></td>
+      <td><Span Class="Stock-Name">Compass Inc.</Span></td>
+      <td>2023-06-27</td>
+      <td>84.9</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>29.25%</b></span></span></td>
+      <td><Span Class="Stock-Name">Audiocodes</Span></td>
+      <td>2023-06-06</td>
+      <td>70.1</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>29.04%</b></span></span></td>
+      <td><Span Class="Stock-Name">Valneva Se</Span></td>
+      <td>2023-06-07</td>
+      <td>78.6</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>28.79%</b></span></span></td>
+      <td><Span Class="Stock-Name">Sunpower</Span></td>
+      <td>2023-07-06</td>
+      <td>75.0</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>28.42%</b></span></span></td>
+      <td><Span Class="Stock-Name">Puma (Brand)</Span></td>
+      <td>2023-06-08</td>
+      <td>74.9</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>28.31%</b></span></span></td>
+      <td><Span Class="Stock-Name">Sportsman'S Warehouse</Span></td>
+      <td>2023-06-14</td>
+      <td>73.4</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>27.33%</b></span></span></td>
+      <td><Span Class="Stock-Name">Sabre Corporation</Span></td>
+      <td>2023-07-05</td>
+      <td>90.4</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>26.79%</b></span></span></td>
+      <td><Span Class="Stock-Name">Fortress Biotech</Span></td>
+      <td>2023-06-05</td>
+      <td>89.1</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>26.00%</b></span></span></td>
+      <td><Span Class="Stock-Name">Global Payments</Span></td>
+      <td>2023-06-28</td>
+      <td>70.6</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>25.97%</b></span></span></td>
+      <td><Span Class="Stock-Name">Catalent</Span></td>
+      <td>2023-06-06</td>
+      <td>74.2</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>24.50%</b></span></span></td>
+      <td><Span Class="Stock-Name">Warby Parker</Span></td>
+      <td>2023-06-13</td>
+      <td>76.2</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>24.04%</b></span></span></td>
+      <td><Span Class="Stock-Name">Taskus</Span></td>
+      <td>2023-07-06</td>
+      <td>75.6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>22.69%</b></span></span></td>
+      <td><Span Class="Stock-Name">Geely</Span></td>
+      <td>2023-06-05</td>
+      <td>72.0</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>22.54%</b></span></span></td>
+      <td><Span Class="Stock-Name">Florian Reike</Span></td>
+      <td>2023-06-27</td>
+      <td>74.0</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>21.51%</b></span></span></td>
+      <td><Span Class="Stock-Name">Youdao</Span></td>
+      <td>2023-07-21</td>
+      <td>77.8</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>21.48%</b></span></span></td>
+      <td><Span Class="Stock-Name">Robert Half</Span></td>
+      <td>2023-06-05</td>
+      <td>71.4</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>21.33%</b></span></span></td>
+      <td><Span Class="Stock-Name">Lufax</Span></td>
+      <td>2023-07-05</td>
+      <td>77.6</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>20.78%</b></span></span></td>
+      <td><Span Class="Stock-Name">Bigcommerce</Span></td>
+      <td>2023-06-05</td>
+      <td>83.4</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>20.78%</b></span></span></td>
+      <td><Span Class="Stock-Name">Silicon Motion</Span></td>
+      <td>2023-07-27</td>
+      <td>73.6</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>20.76%</b></span></span></td>
+      <td><Span Class="Stock-Name">Alteryx</Span></td>
+      <td>2023-06-07</td>
+      <td>77.6</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>20.69%</b></span></span></td>
+      <td><Span Class="Stock-Name">Impala Platinum</Span></td>
+      <td>2023-07-10</td>
+      <td>73.9</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>20.57%</b></span></span></td>
+      <td><Span Class="Stock-Name">Mercury Systems</Span></td>
+      <td>2023-06-26</td>
+      <td>74.9</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>20.06%</b></span></span></td>
+      <td><Span Class="Stock-Name">Phunware</Span></td>
+      <td>2023-07-24</td>
+      <td>88.2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>20.04%</b></span></span></td>
+      <td><Span Class="Stock-Name">Aurora Cannabis</Span></td>
+      <td>2023-06-05</td>
+      <td>79.3</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>19.71%</b></span></span></td>
+      <td><Span Class="Stock-Name">Scotts Miracle-Gro Company</Span></td>
+      <td>2023-06-28</td>
+      <td>77.4</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>19.65%</b></span></span></td>
+      <td><Span Class="Stock-Name">Ocwen</Span></td>
+      <td>2023-06-06</td>
+      <td>72.1</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>19.47%</b></span></span></td>
+      <td><Span Class="Stock-Name">Kopin Corporation</Span></td>
+      <td>2023-06-06</td>
+      <td>71.6</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>19.15%</b></span></span></td>
+      <td><Span Class="Stock-Name">Teladoc Health</Span></td>
+      <td>2023-07-18</td>
+      <td>82.9</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>18.80%</b></span></span></td>
+      <td><Span Class="Stock-Name">Digital Realty</Span></td>
+      <td>2023-06-20</td>
+      <td>77.8</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>18.75%</b></span></span></td>
+      <td><Span Class="Stock-Name">Dzs</Span></td>
+      <td>2023-06-13</td>
+      <td>73.9</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>18.75%</b></span></span></td>
+      <td><Span Class="Stock-Name">Sharecare</Span></td>
+      <td>2023-06-13</td>
+      <td>71.3</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>18.71%</b></span></span></td>
+      <td><Span Class="Stock-Name">Shopify</Span></td>
+      <td>2023-06-08</td>
+      <td>77.0</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>18.47%</b></span></span></td>
+      <td><Span Class="Stock-Name">Westlake Corporation</Span></td>
+      <td>2023-06-07</td>
+      <td>72.7</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>17.39%</b></span></span></td>
+      <td><Span Class="Stock-Name">Tracon</Span></td>
+      <td>2023-07-26</td>
+      <td>71.3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>17.18%</b></span></span></td>
+      <td><Span Class="Stock-Name">Shutterstock</Span></td>
+      <td>2023-06-05</td>
+      <td>72.1</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>16.87%</b></span></span></td>
+      <td><Span Class="Stock-Name">Bio-Techne</Span></td>
+      <td>2023-06-22</td>
+      <td>76.0</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>16.79%</b></span></span></td>
+      <td><Span Class="Stock-Name">Diffusion</Span></td>
+      <td>2023-07-06</td>
+      <td>73.9</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>16.58%</b></span></span></td>
+      <td><Span Class="Stock-Name">Valhi Inc</Span></td>
+      <td>2023-07-06</td>
+      <td>87.9</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>16.01%</b></span></span></td>
+      <td><Span Class="Stock-Name">Modivcare</Span></td>
+      <td>2023-07-03</td>
+      <td>72.6</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>15.67%</b></span></span></td>
+      <td><Span Class="Stock-Name">Tenax</Span></td>
+      <td>2023-06-29</td>
+      <td>70.5</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>15.52%</b></span></span></td>
+      <td><Span Class="Stock-Name">Nextdoor</Span></td>
+      <td>2023-06-07</td>
+      <td>70.6</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>15.31%</b></span></span></td>
+      <td><Span Class="Stock-Name">Wolfspeed Inc</Span></td>
+      <td>2023-07-06</td>
+      <td>85.9</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>15.20%</b></span></span></td>
+      <td><Span Class="Stock-Name">Littelfuse</Span></td>
+      <td>2023-06-12</td>
+      <td>78.5</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>15.17%</b></span></span></td>
+      <td><Span Class="Stock-Name">Siltronic</Span></td>
+      <td>2023-07-03</td>
+      <td>73.4</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>14.48%</b></span></span></td>
+      <td><Span Class="Stock-Name">Gritstone Bio</Span></td>
+      <td>2023-06-05</td>
+      <td>96.4</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>14.27%</b></span></span></td>
+      <td><Span Class="Stock-Name">Expensify</Span></td>
+      <td>2023-06-08</td>
+      <td>80.7</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>14.19%</b></span></span></td>
+      <td><Span Class="Stock-Name">Forsys Metals</Span></td>
+      <td>2023-07-26</td>
+      <td>73.6</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>14.11%</b></span></span></td>
+      <td><Span Class="Stock-Name">Arch Resources</Span></td>
+      <td>2023-07-07</td>
+      <td>72.0</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>14.05%</b></span></span></td>
+      <td><Span Class="Stock-Name">Pan American Silver</Span></td>
+      <td>2023-07-10</td>
+      <td>71.6</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>14.04%</b></span></span></td>
+      <td><Span Class="Stock-Name">Scor Se</Span></td>
+      <td>2023-06-09</td>
+      <td>70.3</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>13.86%</b></span></span></td>
+      <td><Span Class="Stock-Name">Revelation</Span></td>
+      <td>2023-06-07</td>
+      <td>76.3</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>13.79%</b></span></span></td>
+      <td><Span Class="Stock-Name">Truecar</Span></td>
+      <td>2023-06-09</td>
+      <td>77.0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>13.66%</b></span></span></td>
+      <td><Span Class="Stock-Name">Cheetah Mobile</Span></td>
+      <td>2023-06-14</td>
+      <td>70.1</td>
+      <td>46</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>13.63%</b></span></span></td>
+      <td><Span Class="Stock-Name">Hellofresh</Span></td>
+      <td>2023-06-28</td>
+      <td>75.5</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>13.42%</b></span></span></td>
+      <td><Span Class="Stock-Name">Techtarget</Span></td>
+      <td>2023-07-10</td>
+      <td>72.0</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>13.32%</b></span></span></td>
+      <td><Span Class="Stock-Name">Sherwin-Williams</Span></td>
+      <td>2023-06-16</td>
+      <td>73.1</td>
+      <td>39</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>13.19%</b></span></span></td>
+      <td><Span Class="Stock-Name">T. Rowe Price</Span></td>
+      <td>2023-06-06</td>
+      <td>71.5</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>12.92%</b></span></span></td>
+      <td><Span Class="Stock-Name">Abbvie</Span></td>
+      <td>2023-07-13</td>
+      <td>71.8</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>12.80%</b></span></span></td>
+      <td><Span Class="Stock-Name">Ubiquiti</Span></td>
+      <td>2023-06-06</td>
+      <td>72.7</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>12.20%</b></span></span></td>
+      <td><Span Class="Stock-Name">Westwater Resources</Span></td>
+      <td>2023-06-30</td>
+      <td>71.6</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>11.74%</b></span></span></td>
+      <td><Span Class="Stock-Name">Mp Materials</Span></td>
+      <td>2023-07-03</td>
+      <td>75.9</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>11.31%</b></span></span></td>
+      <td><Span Class="Stock-Name">Silicom</Span></td>
+      <td>2023-06-06</td>
+      <td>74.7</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>10.52%</b></span></span></td>
+      <td><Span Class="Stock-Name">Doximity</Span></td>
+      <td>2023-07-07</td>
+      <td>77.0</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>10.41%</b></span></span></td>
+      <td><Span Class="Stock-Name">Teleperformance</Span></td>
+      <td>2023-06-09</td>
+      <td>74.5</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td><span class="profit"><span class="profit"><b>10.02%</b></span></span></td>
+      <td><Span Class="Stock-Name">Echostar</Span></td>
+      <td>2023-07-06</td>
+      <td>77.0</td>
+      <td>24</td>
+    </tr>
+  </tbody>
+</table>
+            </table>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready( function () {
+            $('#table_id').DataTable({
+                responsive: true
+            });
+        } );
+    </script>
+</body>
+</html>
