@@ -25,13 +25,30 @@
             font-weight: bold;
             color: limegreen;
         }
+        .date-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .date-label {
+            font-size: 18px;  /* Increased the font size */
+            color: red;
+        }
+        .date-value {
+            font-size: 14px;  /* Made the date font size smaller */
+        }
     </style>
 </head>
 <body>
     <div class="card">
-        <h2 class="card-title">Bright Health</h2>
-        <p class="card-text"><strong>UpRiseScore: </strong><span class="score">82.9</span></p>
-        <p class="card-text" style="font-weight: bold;"><strong>Evaluation: </strong><span style="color: limegreen;">Buy</span></p>
+        <div class="date-section">
+            <h3 class="card-title">Impala Platinum</h3>
+            <div>
+                <span class="date-label">Date: </span>
+                <span class="date-value">7th, September, 2023</span>
+            </div>
+        </div>
+        <p class="card-text"><strong>UpRiseScore: </strong><span class="score">70.9</span></p>
+        <p class="card-text" style="font-weight: bold;"><strong>Evaluation: </strong><span style="color: yellow;">Consider Buy</span></p>
     </div>
 </body>
 </html>
