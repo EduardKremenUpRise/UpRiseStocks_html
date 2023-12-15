@@ -80,6 +80,17 @@
         .animated-fade-in {
             animation: fadeIn 1s ease-in-out;
         }
+        
+        /* Media Query for screens smaller than 600px */
+        @media (max-width: 600px) {
+            .collapsible, .content p, .content h2, .content h3 {
+                font-size: 10px; /* Adjust as needed */
+            }
+            .collapsible {
+                padding: 10px; /* Smaller padding for smaller screens */
+                font-size: 16px; /* Smaller font size for collapsible headers */
+            }
+        }
     </style>
 </head>
 <body class="center">
