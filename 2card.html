@@ -1,48 +1,64 @@
 
 
-<html>
+
+<html lang="en">
 <head>
     <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <style>
         .card {
             width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid limegreen; /* 1px lime green border */
-            border-radius: 0; /* Squared corners */
-            box-shadow: none; /* No shadow */
+            max-width: 400px; /* Limit maximum width */
+            margin: 10px auto; /* Centering the card with margin auto */
+            padding: 15px;
+            border: 1px solid limegreen; /* Lime green border maintained */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
         }
         .date-section {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .date-label {
-            font-size: 18px;
+            font-size: 18px; /* Original size for desktop */
             color: red;
         }
         .date-value {
-            font-size: 14px;
+            font-size: 14px; /* Original size for desktop */
         }
         .stock-info {
-            font-size: 24px;
+            font-size: 24px; /* Original size for desktop */
             color: #FF5700;
             font-weight: bold;
             margin-bottom: 20px;
         }
         .ticker {
-            font-weight: lighter;
+            font-weight: lighter; /* Slightly reduced weight for better readability */
             margin-right: 5px;
         }
         .card-text {
-            font-size: 18px;
+            font-size: 18px; /* Original size for desktop */
             margin-bottom: 10px;
         }
         .score {
             font-weight: bold;
             color: limegreen;
+        }
+        /* Responsive adjustments for very small screens */
+        @media (max-width: 600px) {
+            .date-label, .date-value, .stock-info, .card-text, .ticker {
+                font-size: 14px; /* Smaller font sizes for smaller devices */
+            }
+            .card {
+                padding: 10px;
+            }
+            .stock-info {
+                font-size: 20px; /* Slightly smaller for compact appearance */
+            }
+            .card-text {
+                font-size: 16px; /* Smaller for a cleaner look on mobile */
+            }
         }
     </style>
 </head>
@@ -50,7 +66,7 @@
     <div class="card">
         <div class="date-section">
             <span class="date-label">Date: </span>
-            <span class="date-value">18th, May, 2024</span>
+            <span class="date-value">20th, May, 2024</span>
         </div>
         <div class="stock-info">
             <span class="ticker">[NBY]</span>
