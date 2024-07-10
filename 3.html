@@ -385,6 +385,53 @@
         body, .container, .content-fieldset, .legend, .collapsible, .widget-popup-content, .financials-content {
             font-size: 1em;
         }
+        @media screen and (max-width: 600px) {
+        .container {
+            width: 100%;
+            padding: 10px;
+        }
+        /* Adjust chart-container to take full width */
+        .chart-container {
+            padding: 10px;
+        }
+        /* Adjust tradingview widget container to full width and set a maximum height */
+        .tradingview-widget-container {
+            width: 100%;
+            height: auto;
+        }
+        .tradingview-widget-container__widget {
+            width: 100%;
+            height: 300px; /* Adjust height for better viewing on mobile */
+        }
+        /* Adjust collapsible button font size and padding */
+        .collapsible {
+            padding: 10px;
+            font-size: 14px;
+        }
+        /* Adjust content font size and padding */
+        .content p, .content h2, .content h3 {
+            font-size: 12px;
+        }
+        #openWidgetBtn, #openFinancialsBtn {
+            font-size: 14px;
+            padding: 8px 12px;
+        }
+        .widget-popup-content {
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            overflow: auto;
+        }
+        /* Adjust AI bar and gauge labels font size */
+        .ai-bar-label, .ai-bar-values span, .gauge-label, .news-polarity-label {
+            font-size: 12px;
+        }
+        .financials-content {
+            width: 100%;
+            overflow: auto;
+            font-size: calc(1rem / 3);
+        }
+    }
     </style>
 
 </head>
