@@ -209,7 +209,7 @@
             display: flex; /* Hide all charts initially */
             justify-content: center;
             padding: 2px;
-            margin-top: 20px;
+            margin-top: 80px;
         }
 
         #chart-30-days {
@@ -470,7 +470,7 @@
             <div class="summary">
                 <div class="gauge-container">
                     <div class="gauge" id="news-articles-gauge" data-toggle="tooltip" title="Number & sentiment of news articles analyzed past 3 days.">
-                        <div><span class="news-polarity-label" style="color: limegreen; font-size: 14px; top:-35px ">Slightly Positive</span></div>
+                        <div><span class="news-polarity-label" style="color: white; font-size: 14px; top:-35px ">Neutral</span></div>
                         <span style="color: inherit;">15</span>
                         <div class="gauge-label">News Articles</div>
                     </div>
@@ -500,25 +500,24 @@
         <!-- Collapsible button for the report -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="Click to see the detailed stock report.">Investment Report Summary</button>
         <div class="content animated-fade-in">
-            <p style="text-align: left; padding: 10px;">The stock 'Conn’s' shows a mixed but potentially lucrative investment profile. 
+            <p style="text-align: left; padding: 10px;">```html
+<ul>
+    <li><span style='color:#FF5700;'><strong>Uprise Score:</strong></span> <span style='color:limegreen;'>73.0</span></li>
+    <li><span style='color:#FF5700;'><strong>AI-Based Price Change Prediction:</strong></span> <span style='color:#FF7276;'>-5.1%</span></li>
+    <li><span style='color:#FF5700;'><strong>Price Volatility Today:</strong></span> Min <span style='color:#FF7276;'>-35.19%</span>, Max <span style='color:limegreen;'>1.76%</span></li>
+    <li><span style='color:#FF5700;'><strong>Interest Change:</strong></span> <span style='color:#FF7276;'>0.0%</span></li>
+    <li><span style='color:#FF5700;'><strong>Yearly Investor Interest:</strong></span> <span style='color:limegreen;'>20.0%</span></li>
+    <li><span style='color:#FF5700;'><strong>Current Price vs. Peak:</strong></span> <span style='color:#FF7276;'>0.4%</span></li>
+    <li><span style='color:#FF5700;'><strong>News Sentiment:</strong></span> Polarity <span style='color:#FF7276;'>0.0</span>, 15 articles</li>
+    <li><span style='color:#FF5700;'><strong>Market Correlation:</strong></span> <span style='color:limegreen;'>83.9%</span></li>
+    <li><span style='color:#FF5700;'><strong>Fundamental Score:</strong></span> <span style='color:#FF7276;'>48.0</span></li>
+    <li><span style='color:#FF5700;'><strong>Optimal Holding Period:</strong></span> <span style='color:limegreen;'>1 days</span></li>
+</ul>
 
-A) The Uprise Score<span style="color:limegreen; font-weight:bold;"> of <span style="color:limegreen; font-weight:bold;">73.0</span></span> indicates a high potential for an above-average spike in price, suggesting a pivotal moment for the stock. This is reinforced by a historical correlation of <span style="color:limegreen; font-weight:bold;">83.9</span>%, demonstrating the score's reliability in predicting market movements.
-
-B) Today's AI-based most probable price change is -<span style="color:limegreen; font-weight:bold;">5.1</span>%, indicating a downward trend and caution is advised.
-
-C) The stock exhibits high volatility with a range of <span style="color:limegreen; font-weight:bold;">36.96</span>%, indicating significant risk and opportunity levels.
-
-D) Yearly investor interest stands at <span style="color:limegreen; font-weight:bold;">20.0</span>%, showing moderate overall attention, and a <span style="color:limegreen; font-weight:bold;">0.0</span>% change in short-term interest indicates stability in investor sentiment.
-
-E) The stock price is at <span style="color:limegreen; font-weight:bold;">0.4</span>% of the past <span style="color:limegreen; font-weight:bold;">365</span> days, pointing to a significant low, potentially signaling a buying opportunity.
-
-F) News sentiment<span style="color:limegreen; font-weight:bold;"> is slightly positive at <span style="color:limegreen; font-weight:bold;">0.1</span></span> with <span style="color:limegreen; font-weight:bold;">15</span> articles in the last three days, suggesting a mild upward influence from recent news.
-
-G) The fundamental score<span style="color:limegreen; font-weight:bold;"> is <span style="color:limegreen; font-weight:bold;">48.0</span></span>, which reflects financial stability but not strong, indicating a cautious approach.
-
-H) Historically, the best holding period was <span style="color:limegreen; font-weight:bold;">1</span> day, suggesting short-term gains might be optimal but should be monitored closely.
-
-**Recommended Strategy and Advice**: Given the high Uprise Score and significant low in stock price, there is potential for gains, but the high volatility and today's downward trend necessitate caution. Investors should closely monitor news and market movements daily. Conducting thorough research into recent news articles is advised before making investment decisions.</p>
+<p><strong>Summary:</strong></p>
+<p>The stock 'Conn’s' shows a <span style='color:limegreen;'>high Uprise Score of 73.0</span>, suggesting strong potential for price movement. However, the <span style='color:#FF7276;'>AI-Based Price Change Prediction of -5.1%</span> signals a cautious outlook. The <span style='color:#FF7276;'>high price volatility today</span> indicates significant market fluctuations, which can be risky. <span style='color:#FF7276;'>Zero interest change</span> indicates no short-term trend movement, and the <span style='color:limegreen;'>low yearly investor interest of 20.0%</span> suggests limited investor attention. The stock is trading at a <span style='color:#FF7276;'>significant low of 0.4% compared to its peak</span>, reflecting potential undervaluation. <span style='color:#FF7276;'>Neutral news sentiment</span> and <span style='color:limegreen;'>strong market correlation of 83.9%</span> imply that the stock’s performance is likely tied to broader market trends. The <span style='color:#FF7276;'>fundamental score of 48.0</span> suggests weak financial health. Lastly, the <span style='color:limegreen;'>optimal holding period of 1 day</span> reflects potential for short-term trading.</p>
+<p>In conclusion, while there are some promising indicators such as the Uprise Score and Market Correlation, the negative AI-Based Prediction, high volatility, and weak fundamentals point to significant risks. Investors should proceed with caution, considering both the opportunities and the potential for loss. Continuous monitoring and further research are essential before making any investment decisions.</p>
+```</p>
         </div>
         <!-- Investor Interest Charts -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="How many people are visiting informational pages daily about the company.">
@@ -727,6 +726,19 @@ H) Historically, the best holding period was <span style="color:limegreen; font-
                 }
 
                 loadTradingViewFinancialsWidget();
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                // Initialize Bootstrap tooltips
+                $('[data-toggle="tooltip"]').tooltip();
+
+                // Ensure tooltips for collapsible buttons are visible on hover
+                $('.collapsible').hover(function() {
+                    $(this).tooltip('show');
+                }, function() {
+                    $(this).tooltip('hide');
+                });
             });
         </script>
 
