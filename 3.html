@@ -209,7 +209,7 @@
             display: flex; /* Hide all charts initially */
             justify-content: center;
             padding: 2px;
-            margin-top: 20px;
+            margin-top: 80px;
         }
 
         #chart-30-days {
@@ -500,9 +500,28 @@
         <!-- Collapsible button for the report -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="Click to see the detailed stock report.">Investment Report Summary</button>
         <div class="content animated-fade-in">
-            <p style="text-align: left; padding: 10px;">Sify's stock exhibits a notable Uprise Score<span style="color:limegreen; font-weight:bold;"> of <span style="color:limegreen; font-weight:bold;">67.7</span></span>, indicating a significant potential for an above-average spike in price. Despite today's predicted AI-based price change of -<span style="color:limegreen; font-weight:bold;">0.6</span>%, the stock is relatively stable, with a volatility range of <span style="color:limegreen; font-weight:bold;">5.99</span>%, classified as low risk and potential. The AI prediction suggests a daily risk of -<span style="color:limegreen; font-weight:bold;">3.27</span>% and an opportunity of <span style="color:limegreen; font-weight:bold;">2.72</span>%. Short-term investor interest has decreased by -<span style="color:limegreen; font-weight:bold;">14.1</span>%, although the yearly interest remains substantial at <span style="color:limegreen; font-weight:bold;">49.23</span>%. The stock price, at <span style="color:limegreen; font-weight:bold;">11.7</span>% of the past year's range, suggests a reasonable low, indicating a higher chance of having reached a significant low. News sentiment<span style="color:limegreen; font-weight:bold;"> is neutral with a polarity of -<span style="color:limegreen; font-weight:bold;">0.0</span></span> from <span style="color:limegreen; font-weight:bold;">12</span> articles, suggesting minimal influence on the stock price from recent news. Historical data shows a strong <span style="color:limegreen; font-weight:bold;">95.1</span>% correlation between the Uprise Score<span style="color:limegreen; font-weight:bold;"> and market movements, while the company's financial stability is rated good with a fundamental score of <span style="color:limegreen; font-weight:bold;">64.55</span></span>. The optimal historical holding period is <span style="color:limegreen; font-weight:bold;">60</span> days. 
+            <p style="text-align: left; padding: 10px;">```html
+<ul>
+    <li><strong><span style="color:#FF5700;">Uprise Score:</span></strong> <span style="color:limegreen;">67.7</span></li>
+    <li><strong><span style="color:#FF5700;">AI-Based Price Change Prediction:</span></strong> <span style="color:#FF7276;">-0.6%</span></li>
+    <li><strong><span style="color:#FF5700;">Price Volatility Today:</span></strong> <span style="color:limegreen;">5.99%</span> (Low)</li>
+    <li><strong><span style="color:#FF5700;">Interest Change:</span></strong> <span style="color:#FF7276;">-14.1%</span></li>
+    <li><strong><span style="color:#FF5700;">Yearly Investor Interest:</span></strong> <span style="color:limegreen;">49.23%</span> (Moderate)</li>
+    <li><strong><span style="color:#FF5700;">Current Price vs. Peak:</span></strong> <span style="color:limegreen;">11.7%</span> (Low)</li>
+    <li><strong><span style="color:#FF5700;">News Sentiment:</span></strong> <span style="color:limegreen;">-0.0</span></li>
+    <li><strong><span style="color:#FF5700;">Market Correlation:</span></strong> <span style="color:limegreen;">95.1%</span> (Strong)</li>
+    <li><strong><span style="color:#FF5700;">Fundamental Score:</span></strong> <span style="color:limegreen;">64.55</span> (Good)</li>
+    <li><strong><span style="color:#FF5700;">Optimal Holding Period:</span></strong> <span style="color:limegreen;">60 days</span></li>
+</ul>
 
-**Summary**: Sify shows promising potential for a price spike, backed by a strong Uprise Score and good fundamental stability. However, recent short-term interest decline and neutral news sentiment warrant careful monitoring. The stock is relatively low-priced compared to the past year, offering a reasonable entry point. Investors should consider a medium-term holding period of around <span style="color:limegreen; font-weight:bold;">60</span> days while continuously monitoring news and market conditions.</p>
+<p><strong>Summary:</strong></p>
+
+<p>The stock 'Sify' shows a <strong>Uprise Score</strong> of <span style="color:limegreen;">67.7</span>, suggesting a high potential for a price spike. However, the <strong>AI-Based Price Change Prediction</strong> is <span style="color:#FF7276;">-0.6%</span>, indicating a slight expected decline within the stability range. The <strong>Price Volatility Today</strong> is <span style="color:limegreen;">5.99%</span>, classified as low, which implies a stable trading environment. The <strong>Interest Change</strong> is <span style="color:#FF7276;">-14.1%</span>, suggesting a negative short-term trend. The <strong>Yearly Investor Interest</strong> stands at <span style="color:limegreen;">49.23%</span>, showing moderate interest.</p>
+
+<p>The <strong>Current Price vs. Peak</strong> is <span style="color:limegreen;">11.7%</span>, indicating the price is in the low range compared to its peak. The <strong>News Sentiment</strong> is neutral at <span style="color:limegreen;">-0.0</span>, which does not strongly influence the stock. The <strong>Market Correlation</strong> is <span style="color:limegreen;">95.1%</span>, showing strong predictability with the market. The <strong>Fundamental Score</strong> is <span style="color:limegreen;">64.55</span>, reflecting good financial health. Lastly, the <strong>Optimal Holding Period</strong> is <span style="color:limegreen;">60 days</span>, indicating a historical best return period.</p>
+
+<p>In summary, Sify presents both opportunities and risks. The high <strong>Uprise Score</strong> and <strong>Fundamental Score</strong> are optimistic, while the negative <strong>AI-Based Price Change Prediction</strong> and <strong>Interest Change</strong> warrant caution. The low <strong>Price Volatility</strong> suggests a stable trading environment, and the strong <strong>Market Correlation</strong> enhances predictability. The moderate <strong>Yearly Investor Interest</strong> and low <strong>Current Price vs. Peak</strong> may offer a buying opportunity if market conditions improve. Investors should monitor ongoing data and perform further research before making decisions.</p>
+```</p>
         </div>
         <!-- Investor Interest Charts -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="How many people are visiting informational pages daily about the company.">
@@ -711,6 +730,19 @@
                 }
 
                 loadTradingViewFinancialsWidget();
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                // Initialize Bootstrap tooltips
+                $('[data-toggle="tooltip"]').tooltip();
+
+                // Ensure tooltips for collapsible buttons are visible on hover
+                $('.collapsible').hover(function() {
+                    $(this).tooltip('show');
+                }, function() {
+                    $(this).tooltip('hide');
+                });
             });
         </script>
 
