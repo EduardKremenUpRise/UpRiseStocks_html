@@ -470,8 +470,8 @@
             <div class="summary">
                 <div class="gauge-container">
                     <div class="gauge" id="news-articles-gauge" data-toggle="tooltip" title="Number & sentiment of news articles analyzed past 3 days.">
-                        <div><span class="news-polarity-label" style="color: white; font-size: 14px; top:-35px ">Neutral</span></div>
-                        <span style="color: inherit;">13</span>
+                        <div><span class="news-polarity-label" style="color: red; font-size: 14px; top:-35px ">Slightly Negative</span></div>
+                        <span style="color: inherit;">11</span>
                         <div class="gauge-label">News Articles</div>
                     </div>
                     <div class="gauge" id="uprise-score-gauge" data-toggle="tooltip" title="Uprise score based on recent data">
@@ -500,17 +500,13 @@
         <!-- Collapsible button for the report -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="Click to see the detailed stock report.">Investment Report Summary</button>
         <div class="content animated-fade-in">
-            <p style="text-align: left; padding: 10px;">The stock 'CarParts.com' presents a mixed investment potential based on current indicators:
+            <p style="text-align: left; padding: 10px;">CarParts.com presents a mix of opportunities and risks based on various indicators. 
 
-A) **Opportunity**: The Uprise Score<span style="color:limegreen; font-weight:bold;"> of <span style="color:limegreen; font-weight:bold;">61.3</span></span> indicates a pivotal moment with potential for an above-average spike in price. The AI-based maximum price change for today is <span style="color:limegreen; font-weight:bold;">2.48</span>%, suggesting a moderate opportunity. The stock price for the past year is at <span style="color:limegreen; font-weight:bold;">11.9</span>%, indicating a reasonable low, which can be a good entry point.
+A) **Opportunity**: The stock's Uprise Score<span style="color:limegreen; font-weight:bold;"> of <span style="color:limegreen; font-weight:bold;">61.3</span></span> suggests a potential for an above-average spike in price. The AI-based predicted price change for today is -<span style="color:limegreen; font-weight:bold;">0.3</span>%, indicating stability for the day. The potential price change range (maximum <span style="color:limegreen; font-weight:bold;">2.48</span>% and minimum -<span style="color:limegreen; font-weight:bold;">3.07</span>%) shows medium risk and potential.
 
-B) **Risk**: The AI-based most probable price change for today is -<span style="color:limegreen; font-weight:bold;">0.3</span>%, suggesting relative stability but not a strong upward movement today. The minimum price change risk is -<span style="color:limegreen; font-weight:bold;">3.07</span>%, and the overall stock range for today is <span style="color:limegreen; font-weight:bold;">5.55</span>%, indicating a medium risk and potential level. The overall interest has decreased by -<span style="color:limegreen; font-weight:bold;">25.6</span>%, pointing to a short-term decline in investor attention.
+B) **Risk**: The overall interest has changed by -<span style="color:limegreen; font-weight:bold;">25.6</span>% recently, showing a declining short-term trend. The stock is at <span style="color:limegreen; font-weight:bold;">11.9</span>% of its past year's price range, indicating a reasonable low but not a significant low. News sentiment<span style="color:limegreen; font-weight:bold;"> is slightly negative at -<span style="color:limegreen; font-weight:bold;">0.1</span></span> with <span style="color:limegreen; font-weight:bold;">11</span> articles, suggesting a potential downward movement influenced by news.
 
-C) **Sentiment**: News sentiment<span style="color:limegreen; font-weight:bold;"> is neutral (-<span style="color:limegreen; font-weight:bold;">0.0</span></span>) with <span style="color:limegreen; font-weight:bold;">13</span> articles in the last three days, suggesting that news will not significantly influence the stock price. However, the historical correlation of <span style="color:limegreen; font-weight:bold;">85.3</span>% with the Uprise Score indicates a reliable prediction record.
-
-D) **Fundamentals**: The fundamental score<span style="color:limegreen; font-weight:bold;"> of <span style="color:limegreen; font-weight:bold;">46.36</span></span> suggests the company's financial stability is currently unhealthy, warranting caution.
-
-**Strategy and Advice**: Given the mixed signals, consider a short-term holding period of <span style="color:limegreen; font-weight:bold;">1</span> day based on historical data for optimal returns. However, closely monitor daily news and market conditions before investing. Research the latest news thoroughly to make an informed decision.</p>
+C) **Recommendation**: The fundamental score<span style="color:limegreen; font-weight:bold;"> of <span style="color:limegreen; font-weight:bold;">46.36</span></span> indicates the company's financial stability is just okay. Given the historical best holding period of <span style="color:limegreen; font-weight:bold;">1</span> day and the mixed indicators, short-term monitoring is advisable. Research news thoroughly and be prepared for potential volatility.</p>
         </div>
         <!-- Investor Interest Charts -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="How many people are visiting informational pages daily about the company.">
@@ -638,7 +634,7 @@ D) **Fundamentals**: The fundamental score<span style="color:limegreen; font-wei
                     setGaugeColor('uprise-score-gauge', 61.3);
                     setGaugeColor('investor-interest-gauge', 37.6);
                     setGaugeColor('past-accuracy-gauge', 85.3);
-                    setGaugeColor('news-articles-gauge', 13);
+                    setGaugeColor('news-articles-gauge', 11);
                     setGaugeColor('fundamental-overall-gauge', 46.4);
                 }
 
