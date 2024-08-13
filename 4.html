@@ -460,9 +460,9 @@
                 <div class="ai-bar" id="ai-bar">
                     <div class="ai-bar-label">AI based probable close price change today.</div>
                     <div class="ai-bar-values">
-                        <span>Min: <span style="color: red; font-weight: bold;">-3.4</span>%</span>
-                        <span>Mean: <span style="color: red; font-weight: bold;">-0.4</span>%</span>
-                        <span>Max: <span style="color: lightgreen; font-weight: bold;">+ 2.4</span>%</span>
+                        <span>Min: <span style="color: red; font-weight: bold;">-3.2</span>%</span>
+                        <span>Mean: <span style="color: red; font-weight: bold;">-0.3</span>%</span>
+                        <span>Max: <span style="color: lightgreen; font-weight: bold;">+ 2.5</span>%</span>
                     </div>
                 </div>
             </div>
@@ -470,7 +470,7 @@
             <div class="summary">
                 <div class="gauge-container">
                     <div class="gauge" id="news-articles-gauge" data-toggle="tooltip" title="Number & sentiment of news articles analyzed past 3 days.">
-                        <div><span class="news-polarity-label" style="color: limegreen; font-size: 14px; top:-35px ">Slightly Positive</span></div>
+                        <div><span class="news-polarity-label" style="color: white; font-size: 14px; top:-35px ">Neutral</span></div>
                         <span style="color: inherit;">110</span>
                         <div class="gauge-label">News Articles</div>
                     </div>
@@ -500,38 +500,29 @@
         <!-- Collapsible button for the report -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="Click to see the detailed stock report.">Investment Report Summary</button>
         <div class="content animated-fade-in">
-            <p style="text-align: left; padding: 10px;"><!DOCTYPE html>
-<html>
-<head>
-    <title>Stock Analysis: Lithium</title>
-</head>
-<body>
-    <h2>Stock Analysis: Lithium</h2>
-    <ul>
-        <li><span style='color:#FF5700;'><strong>Uprise Score:</strong></span> <span style='color:limegreen;'>68.1</span></li>
-        <li><span style='color:#FF5700;'><strong>AI-Based Price Change Prediction:</strong></span> <span style='color:#FF7276;'>-0.4%</span></li>
-        <li><span style='color:#FF5700;'><strong>Price Volatility Today:</strong></span> <span style='color:limegreen;'>Min -3.38%, Max 2.37% (Total volatility: 5.75%)</span></li>
-        <li><span style='color:#FF5700;'><strong>Interest Change:</strong></span> <span style='color:#FF7276;'>-14.5%</span></li>
-        <li><span style='color:#FF5700;'><strong>Yearly Investor Interest:</strong></span> <span style='color:limegreen;'>29.6%</span></li>
-        <li><span style='color:#FF5700;'><strong>Current Price (%) vs. 365 day Peak:</strong></span> <span style='color:limegreen;'>20.5%</span></li>
-        <li><span style='color:#FF5700;'><strong>News Sentiment:</strong></span> <span style='color:limegreen;'>Polarity 0.1, 110 articles</span></li>
-        <li><span style='color:#FF5700;'><strong>Price to Uprise Score Correlation:</strong></span> <span style='color:limegreen;'>97.2%</span></li>
-        <li><span style='color:#FF5700;'><strong>Fundamental Score:</strong></span> <span style='color:#FF7276;'>41.0</span></li>
-        <li><span style='color:#FF5700;'><strong>Optimal Holding Period:</strong></span> <span style='color:limegreen;'>60 days</span></li>
-    </ul>
+            <p style="text-align: left; padding: 10px;">```html
+<ul>
+    <li><span style='color:#FF5700;'><strong>Uprise Score:</strong></span> <span style='color:limegreen;'>68.1</span></li>
+    <li><span style='color:#FF5700;'><strong>AI-Based Price Change Prediction:</strong></span> <span style='color:#FF7276;'>-0.3%</span></li>
+    <li><span style='color:#FF5700;'><strong>Price Volatility Today:</strong></span> Min <span style='color:#FF7276;'>-3.23%</span>, Max <span style='color:limegreen;'>2.48%</span> (Total: <span style='color:limegreen;'>5.71%</span>, Low)</li>
+    <li><span style='color:#FF5700;'><strong>Interest Change:</strong></span> <span style='color:#FF7276;'>-14.5%</span> (Negative Trend: Light)</li>
+    <li><span style='color:#FF5700;'><strong>Yearly Investor Interest:</strong></span> <span style='color:limegreen;'>29.6%</span> (Low)</li>
+    <li><span style='color:#FF5700;'><strong>Current Price (%) vs. 365 day Peak:</strong></span> <span style='color:limegreen;'>20.5%</span> (Low)</li>
+    <li><span style='color:#FF5700;'><strong>News Sentiment:</strong></span> Polarity <span style='color:#FF7276;'>0.0</span>, <span style='color:limegreen;'>110 articles</span> (Neutral Sentiment, High Volume)</li>
+    <li><span style='color:#FF5700;'><strong>Price to Uprise Score Correlation:</strong></span> <span style='color:limegreen;'>97.2%</span> (Strong)</li>
+    <li><span style='color:#FF5700;'><strong>Fundamental Score:</strong></span> <span style='color:#FF7276;'>41.0</span> (Unhealthy)</li>
+    <li><span style='color:#FF5700;'><strong>Optimal Holding Period:</strong></span> <span style='color:limegreen;'>60 days</span></li>
+</ul>
 
-    <h3>Summary</h3>
-    <p>
-        The stock 'Lithium' demonstrates a <strong>Uprise Score</strong> of <span style='color:limegreen;'>68.1</span>, suggesting a high potential for a price spike. However, the <strong>AI-Based Price Change Prediction</strong> shows a slight decline of <span style='color:#FF7276;'>-0.4%</span>, which remains within the stability range. Today's <strong>Price Volatility</strong> is low, with a total volatility of <span style='color:limegreen;'>5.75%</span>, indicating relatively stable trading.
+<p><strong>Summary:</strong></p>
+<p>The stock 'Lithium' shows a <span style='color:limegreen;'>high potential</span> for a price spike with an <span style='color:limegreen;'>Uprise Score</span> of <span style='color:limegreen;'>68.1</span>, indicating a strong opportunity for short-term gains. However, the <span style='color:#FF7276;'>AI-Based Price Change Prediction</span> is <span style='color:#FF7276;'>-0.3%</span>, suggesting a slight downward trend, which is within the stability range but should not be ignored. The <span style='color:limegreen;'>Price Volatility Today</span> is classified as <span style='color:limegreen;'>low</span>, signaling a stable trading environment.</p>
 
-        The <strong>Interest Change</strong> is negative at <span style='color:#FF7276;'>-14.5%</span>, suggesting a short-term negative trend. The <strong>Yearly Investor Interest</strong> stands at <span style='color:limegreen;'>29.6%</span>, categorized as low, implying cautious but growing interest over the year. The <strong>Current Price</strong> compared to the 365-day peak is <span style='color:limegreen;'>20.5%</span>, placing it in a low range which is favorable for potential gains.
+<p>The <span style='color:#FF7276;'>Interest Change</span> of <span style='color:#FF7276;'>-14.5%</span> indicates a light negative trend, and the <span style='color:limegreen;'>Yearly Investor Interest</span> is at a <span style='color:limegreen;'>low</span> of <span style='color:limegreen;'>29.6%</span>. This suggests that while interest is not very high, it is not alarmingly low either. The <span style='color:limegreen;'>Current Price vs. 365 day Peak</span> at <span style='color:limegreen;'>20.5%</span> is considered low, indicating potential for growth.</p>
 
-        <strong>News Sentiment</strong> is slightly positive with a polarity of <span style='color:limegreen;'>0.1</span> across 110 articles, suggesting a stable media perception with minimal immediate impact from individual articles. The <strong>Price to Uprise Score Correlation</strong> is very strong at <span style='color:limegreen;'>97.2%</span>, indicating high predictability based on the Uprise Score. However, the <strong>Fundamental Score</strong> of <span style='color:#FF7276;'>41.0</span> reflects unhealthy financial health, warranting caution. The recommended <strong>Optimal Holding Period</strong> is <span style='color:limegreen;'>60 days</span>, suggesting an optimal short-term investment timeframe.
+<p>While the <span style='color:#FF7276;'>News Sentiment</span> is neutral at <span style='color:#FF7276;'>0.0</span> with <span style='color:limegreen;'>110 articles</span>, it implies the stock is not overly influenced by any single news piece. The <span style='color:limegreen;'>Price to Uprise Score Correlation</span> of <span style='color:limegreen;'>97.2%</span> shows strong predictability, which is a positive indicator. However, the <span style='color:#FF7276;'>Fundamental Score</span> of <span style='color:#FF7276;'>41.0</span> points to some financial health concerns.</p>
 
-        Given these indicators, while there is potential for short-term gains due to a high Uprise Score and strong predictability, the overall financial health and negative interest change calls for a cautious approach. Investors should closely monitor ongoing data, market conditions, and news sentiment. It is crucial to conduct further research and consider diversifying investments to mitigate risk.
-    </p>
-</body>
-</html></p>
+<p>Overall, the optimal holding period is <span style='color:limegreen;'>60 days</span>, suggesting short-term potential. Investors should be mindful of the mixed indicators and the unhealthy fundamental score. It is recommended to monitor the stock closely and conduct further research before making any investment decisions. Consider the slight negative trend and financial health concerns, balanced against the strong uprise potential and low current price.</p>
+```</p>
         </div>
         <!-- Investor Interest Charts -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="How many people are visiting informational pages daily about the company.">
