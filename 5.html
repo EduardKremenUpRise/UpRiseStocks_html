@@ -460,9 +460,9 @@
                 <div class="ai-bar" id="ai-bar">
                     <div class="ai-bar-label">AI based probable close price change today.</div>
                     <div class="ai-bar-values">
-                        <span>Min: <span style="color: red; font-weight: bold;">-3.1</span>%</span>
-                        <span>Mean: <span style="color: lightgreen; font-weight: bold;">+ 0.2</span>%</span>
-                        <span>Max: <span style="color: lightgreen; font-weight: bold;">+ 4.3</span>%</span>
+                        <span>Min: <span style="color: red; font-weight: bold;">-3.0</span>%</span>
+                        <span>Mean: <span style="color: lightgreen; font-weight: bold;">+ 0.3</span>%</span>
+                        <span>Max: <span style="color: lightgreen; font-weight: bold;">+ 5.0</span>%</span>
                     </div>
                 </div>
             </div>
@@ -500,38 +500,62 @@
         <!-- Collapsible button for the report -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="Click to see the detailed stock report.">Investment Report Summary</button>
         <div class="content animated-fade-in">
-            <p style="text-align: left; padding: 10px;">```html
+            <p style="text-align: left; padding: 10px;"><!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .indicator-name {
+    color: yellow;
+  }
+  .positive-value {
+    color: limegreen;
+  }
+  .negative-value {
+    color: #FF7276;
+  }
+</style>
+</head>
+<body>
+
 <ul>
-<li><span style='color:yellow;'><strong>Uprise Score:</strong></span> <span style='color:limegreen;'>67.1</span></li>
-<li><span style='color:yellow;'><strong>AI-Based Price Change Prediction:</strong></span> <span style='color:limegreen;'>0.2%</span></li>
-<li><span style='color:yellow;'><strong>Price Volatility Today:</strong></span> Min <span style='color:#FF7276;'>-3.11%</span>, Max <span style='color:limegreen;'>4.31%</span>, Total <span style='color:limegreen;'>7.42%</span></li>
-<li><span style='color:yellow;'><strong>Interest Change:</strong></span> <span style='color:#FF7276;'>-18.2%</span></li>
-<li><span style='color:yellow;'><strong>Yearly Investor Interest:</strong></span> <span style='color:limegreen;'>31.27%</span></li>
-<li><span style='color:yellow;'><strong>Current Price (%) vs. 365 day Peak:</strong></span> <span style='color:limegreen;'>24.7%</span></li>
-<li><span style='color:yellow;'><strong>News Sentiment:</strong></span> Polarity <span style='color:limegreen;'>0.1</span>, 12 articles</li>
-<li><span style='color:yellow;'><strong>Price to Uprise Score Correlation:</strong></span> <span style='color:limegreen;'>90.0%</span></li>
-<li><span style='color:yellow;'><strong>Fundamental Score:</strong></span> <span style='color:#FF7276;'>45.0</span></li>
-<li><span style='color:yellow;'><strong>Optimal Holding Period:</strong></span> 60 days</li>
+  <li><strong class="indicator-name">Uprise Score:</strong> <span class="positive-value">67.1</span></li>
+  <li><strong class="indicator-name">AI-Based Price Change Prediction:</strong> <span class="positive-value">0.3%</span></li>
+  <li><strong class="indicator-name">Price Volatility Today:</strong> <span class="positive-value">7.98%</span></li>
+  <li><strong class="indicator-name">Interest Change:</strong> <span class="negative-value">-18.2%</span></li>
+  <li><strong class="indicator-name">Yearly Investor Interest:</strong> <span class="positive-value">31.27%</span></li>
+  <li><strong class="indicator-name">Current Price (%) vs. 365 day Peak:</strong> <span class="positive-value">24.7%</span></li>
+  <li><strong class="indicator-name">News Sentiment:</strong> <span class="positive-value">0.1</span>, 12 articles</li>
+  <li><strong class="indicator-name">Price to Uprise Score Correlation:</strong> <span class="positive-value">90.0%</span></li>
+  <li><strong class="indicator-name">Fundamental Score:</strong> <span class="negative-value">45.0</span></li>
+  <li><strong class="indicator-name">Optimal Holding Period:</strong> <span class="positive-value">60 days</span></li>
 </ul>
 
-<h3>Summary</h3>
-The stock for 'LightInTheBox' presents a mixed bag of indicators that necessitate a cautious approach. The <strong>Uprise Score</strong> of <span style='color:limegreen;'>67.1</span> suggests a high potential for a price spike, which is promising. The <strong>AI-Based Price Change Prediction</strong> is at <span style='color:limegreen;'>0.2%</span>, indicating stability within a safe range.
+<h2>Summary</h2>
+<p>Based on the analysis of the indicators, <strong>LightInTheBox</strong> appears to have a mixed outlook with potential for both opportunities and risks:</p>
 
-Today's <strong>Price Volatility</strong> is low at <span style='color:limegreen;'>7.42%</span>, suggesting low risk in terms of price swings. However, the <strong>Interest Change</strong> is <span style='color:#FF7276;'>-18.2%</span>, indicating a negative short-term trend, which is worth noting.
+<ul>
+  <li>The <strong class="indicator-name">Uprise Score</strong> at <span class="positive-value">67.1</span> suggests a high potential for a price spike.</li>
+  <li>The <strong class="indicator-name">AI-Based Price Change Prediction</strong> of <span class="positive-value">0.3%</span> indicates stability within a safe range.</li>
+  <li>The <strong class="indicator-name">Price Volatility Today</strong> at <span class="positive-value">7.98%</span> is classified as low, implying relatively stable price movements.</li>
+  <li>The <strong class="indicator-name">Interest Change</strong> showing <span class="negative-value">-18.2%</span> indicates a short-term negative trend, although it is not very strong.</li>
+  <li>The <strong class="indicator-name">Yearly Investor Interest</strong> at <span class="positive-value">31.27%</span> is moderate, suggesting some level of sustained interest in the stock.</li>
+  <li>The <strong class="indicator-name">Current Price (%) vs. 365 day Peak</strong> at <span class="positive-value">24.7%</span> is in the lower range, which is generally good for potential upward movement.</li>
+  <li>The <strong class="indicator-name">News Sentiment</strong> is slightly positive at <span class="positive-value">0.1</span> with 12 articles, indicating a mildly favorable view with moderate sensitivity to news.</li>
+  <li>The <strong class="indicator-name">Price to Uprise Score Correlation</strong> at <span class="positive-value">90.0%</span> shows a strong predictability, enhancing confidence in the Uprise Score.</li>
+  <li>The <strong class="indicator-name">Fundamental Score</strong> at <span class="negative-value">45.0</span> suggests the financial health of the company is unhealthy, which is a concern.</li>
+  <li>The <strong class="indicator-name">Optimal Holding Period</strong> of <span class="positive-value">60 days</span> aligns with the potential for price movement, indicating a suitable time frame for holding the stock.</li>
+</ul>
 
-The <strong>Yearly Investor Interest</strong> is at a moderate level of <span style='color:limegreen;'>31.27%</span>, and the <strong>Current Price vs. 365 day Peak</strong> is low at <span style='color:limegreen;'>24.7%</span>, both of which could signal potential for growth. The <strong>News Sentiment</strong> is slightly positive at <span style='color:limegreen;'>0.1</span> with 12 articles, which means the stock is moderately covered by news and can be influenced by it.
+<h2>Summary</h2>
+<p>LightInTheBox presents a mixed investment opportunity. The high <strong class="indicator-name">Uprise Score</strong> and strong <strong class="indicator-name">Price to Uprise Score Correlation</strong> suggest potential for a price spike, making it an attractive short-term investment. However, the negative <strong class="indicator-name">Interest Change</strong> and unhealthy <strong class="indicator-name">Fundamental Score</strong> indicate underlying risks that should not be ignored. The moderate <strong class="indicator-name">Yearly Investor Interest</strong> and stable <strong class="indicator-name">AI-Based Price Change Prediction</strong> provide some reassurance, but caution is advised due to the flags raised by the <strong class="indicator-name">Fundamental Score</strong>. Investors should closely monitor ongoing data and news sentiment, and consider the <strong class="indicator-name">Optimal Holding Period</strong> of 60 days to maximize potential returns while being prepared for volatility.</p>
 
-A strong correlation of <span style='color:limegreen;'>90.0%</span> between the <strong>Price and Uprise Score</strong> suggests high predictability based on the Uprise Score. However, the <strong>Fundamental Score</strong> of <span style='color:#FF7276;'>45.0</span> indicates a somewhat unhealthy financial status, which is a red flag.
+<p><strong>Be careful with any decision and continue to monitor and research further before making any investment.</strong></p>
 
-The <strong>Optimal Holding Period</strong> of 60 days suggests that historically, the best returns were achieved within this timeframe. However, it is essential to continuously monitor ongoing data.
-
-<strong>Risk:</strong> The negative trend indicated by the <strong>Interest Change</strong> and the relatively low <strong>Fundamental Score</strong> suggest underlying risks. The <strong>Fundamental Score</strong> particularly raises concerns about the company's financial health.
-
-<strong>Opportunity:</strong> The high <strong>Uprise Score</strong>, stability in the <strong>AI-Based Price Change Prediction</strong>, and low <strong>Current Price vs. 365 day Peak</strong> indicate potential for upward movement.
-
-<strong>Considerations:</strong> Be mindful of the negative short-term trend and the company's less-than-ideal financial health. It is advisable to keep abreast of news articles given the moderate coverage and slight positive sentiment. 
-
-In conclusion, while there is potential for gains, the risks highlighted necessitate careful monitoring and further research before making investment decisions.</p>
+</body>
+</html></p>
         </div>
         <!-- Investor Interest Charts -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="How many people are visiting informational pages daily about the company.">
