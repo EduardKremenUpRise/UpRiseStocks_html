@@ -22,7 +22,7 @@
             text-align: center;
         }
         .container {
-            width: 80%;
+            width: 100%;
             max-width: 1000px;
             margin: auto;
             padding: 20px;
@@ -103,7 +103,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 10px;
+            padding: 2px;
             border: 2px solid #0b0;
             border-radius: 10px;
             background-color: #252525;
@@ -159,8 +159,8 @@
             background-color: #2e2e2e;
             display: flex;
             justify-content: center;
-            padding: 2px;
-            margin-top: 80px;
+            padding: 0px;
+            margin-top: 10px;
         }
         .chart-btn.active {
             background-color: #ff5700;
@@ -211,15 +211,21 @@
             animation: fadeIn 1s ease-in-out;
         }
         @media (max-width: 600px) {
-            .collapsible, .content p, .content h2, .content h3 {
+             .content p, .content h2, .content h3 {
                 font-size: 14px;
+            }
+            .collapsible{
+                font-size:12px;
+            }
+            .ai-bar-values span {
+                font-size: 15px;
             }
             .gauge{
                 width:80px;
                 height:80px;
             }
             .report-summary-content {
-                font-size: 14px; /* Adjust this value as needed */
+                font-size: 12px; /* Adjust this value as needed */
             }
             
             .collapsible {
@@ -233,7 +239,7 @@
                 overflow: auto;
             }
             .gauge-label {
-                font-size: 12px;
+                font-size: 11px;
                 font-weight: bold;
                 margin-top: 10px;
             }
@@ -271,7 +277,7 @@
             <div class="summary">
                 <div class="gauge-container">
                     <div class="gauge" id="news-articles-gauge" data-toggle="tooltip" title="Number & sentiment of news articles analyzed past 3 days.">
-                        <div><span class="news-polarity-label" style="color: red; font-size: 14px; top:-35px ">Slightly Negative</span></div>
+                        <div><span class="news-polarity-label" style="color: white; font-size: 14px; top:-35px ">Neutral</span></div>
                         <span style="color: inherit;">10</span>
                         <div class="gauge-label">News Articles</div>
                     </div>
@@ -303,32 +309,30 @@
         <div class="content report-summary-content animated-fade-in">
             <p style="text-align: left; padding: 10px;">```html
 <ul>
-  <li><span style='color:yellow;'><strong>Uprise Score:</strong></span> <span style='color:limegreen;'>73.6</span></li>
-  <li><span style='color:yellow;'><strong>AI-Based Price Change Prediction:</strong></span> <span style='color:#FF7276;'>-0.2%</span></li>
-  <li><span style='color:yellow;'><strong>Price Volatility Today:</strong></span> <span style='color:limegreen;'>5.8%</span> (Low)</li>
-  <li><span style='color:yellow;'><strong>Interest Change:</strong></span> <span style='color:limegreen;'>14.6%</span></li>
-  <li><span style='color:yellow;'><strong>Yearly Investor Interest:</strong></span> <span style='color:limegreen;'>64.7%</span> (High)</li>
-  <li><span style='color:yellow;'><strong>Current Price (%) vs. 365 day Peak:</strong></span> <span style='color:limegreen;'>12.6%</span> (Low)</li>
-  <li><span style='color:yellow;'><strong>News Sentiment:</strong></span> <span style='color:#FF7276;'>-0.1</span> (10 articles)</li>
-  <li><span style='color:yellow;'><strong>Price to Uprise Score Correlation:</strong></span> <span style='color:limegreen;'>86.6%</span> (Strong)</li>
-  <li><span style='color:yellow;'><strong>Fundamental Score:</strong></span> <span style='color:#FF7276;'>46.4</span> (Unhealthy)</li>
-  <li><span style='color:yellow;'><strong>Optimal Holding Period:</strong></span> <span style='color:limegreen;'>1 day</span></li>
+    <li><span style='color:yellow;'><strong>Uprise Score:</strong></span> <span style='color:limegreen;'>73.6</span></li>
+    <li><span style='color:yellow;'><strong>AI-Based Price Change Prediction:</strong></span> <span style='color:#FF7276;'>-0.2%</span></li>
+    <li><span style='color:yellow;'><strong>Price Volatility Today:</strong></span> <span style='color:limegreen;'>5.8%</span> (classified as low)</li>
+    <li><span style='color:yellow;'><strong>Interest Change:</strong></span> <span style='color:limegreen;'>14.6%</span></li>
+    <li><span style='color:yellow;'><strong>Yearly Investor Interest:</strong></span> <span style='color:limegreen;'>64.7%</span></li>
+    <li><span style='color:yellow;'><strong>Current Price (%) vs. 365 day Peak:</strong></span> <span style='color:limegreen;'>12.6%</span></li>
+    <li><span style='color:yellow;'><strong>News Sentiment:</strong></span> <span style='color:#FF7276;'>-0.0</span>, <span style='color:limegreen;'>10 articles</span></li>
+    <li><span style='color:yellow;'><strong>Price to Uprise Score Correlation:</strong></span> <span style='color:limegreen;'>86.6%</span></li>
+    <li><span style='color:yellow;'><strong>Fundamental Score:</strong></span> <span style='color:limegreen;'>46.4</span></li>
+    <li><span style='color:yellow;'><strong>Optimal Holding Period:</strong></span> <span style='color:limegreen;'>1 day</span></li>
 </ul>
 
-<strong>Summary:</strong>
-Based on the indicators analyzed for 'CarParts.com', the stock presents a mixed bag of signals that investors should carefully consider. The <strong>Uprise Score</strong> of <span style='color:limegreen;'>73.6</span> is quite promising, indicating a high potential for a price spike. The <strong>AI-Based Price Change Prediction</strong> of <span style='color:#FF7276;'>-0.2%</span> suggests slight caution but remains within the stability range. Today's <strong>Price Volatility</strong> of <span style='color:limegreen;'>5.8%</span> is low, which is favorable for risk-averse investors.
+<h3>Summary</h3>
+Based on the provided indicators, CarParts.com presents a nuanced investment opportunity. The <strong>Uprise Score</strong> of <span style='color:limegreen;'>73.6</span> suggests a high potential for a price spike. However, the <strong>AI-Based Price Change Prediction</strong> of <span style='color:#FF7276;'>-0.2%</span> indicates a slight expected decline, which may warrant caution.
 
-The <strong>Interest Change</strong> is <span style='color:limegreen;'>14.6%</span>, indicating a positive short-term trend. The <strong>Yearly Investor Interest</strong> of <span style='color:limegreen;'>64.7%</span> is high, reflecting strong market attention. The <strong>Current Price (%) vs. 365 day Peak</strong> at <span style='color:limegreen;'>12.6%</span> indicates the stock is in a low range, which is good for potential gains.
+The <strong>Price Volatility Today</strong> is <span style='color:limegreen;'>5.8%</span>, indicating low volatility, which generally suggests a stable price range for the day. The <strong>Interest Change</strong> of <span style='color:limegreen;'>14.6%</span> and the <strong>Yearly Investor Interest</strong> of <span style='color:limegreen;'>64.7%</span> reflect moderate to strong positive investor sentiment.
 
-However, the <strong>News Sentiment</strong> is <span style='color:#FF7276;'>-0.1</span>, which is slightly negative and should be monitored. The <strong>Price to Uprise Score Correlation</strong> of <span style='color:limegreen;'>86.6%</span> suggests strong predictability based on the current uprise score. The <strong>Fundamental Score</strong> of <span style='color:#FF7276;'>46.4</span> indicates the stock is unhealthy, which raises concerns about its long-term viability. Finally, the <strong>Optimal Holding Period</strong> of <span style='color:limegreen;'>1 day</span> suggests this stock might be more suited for short-term trading.
+The <strong>Current Price (%) vs. 365 day Peak</strong> at <span style='color:limegreen;'>12.6%</span> suggests the stock is in a low price range relative to its peak, indicating potential for growth. However, the <strong>News Sentiment</strong> is neutral with a <span style='color:#FF7276;'>-0.0</span> polarity and <span style='color:limegreen;'>10 articles</span>, suggesting that the stock might be sensitive to news.
 
-<strong>Risk:</strong> The negative sentiment and unhealthy fundamental score pose risks. The stock's slight predicted price decline and unhealthy fundamentals could lead to potential losses if the market sentiment worsens.
+The <strong>Price to Uprise Score Correlation</strong> is robust at <span style='color:limegreen;'>86.6%</span>, indicating a strong predictability of price movements based on the Uprise Score. The <strong>Fundamental Score</strong> of <span style='color:limegreen;'>46.4</span> signifies a somewhat unhealthy financial state, which is a consideration for long-term investment.
 
-<strong>Opportunity:</strong> The high uprise score, low current price versus the yearly peak, and strong correlation between price and uprise score present opportunities for short-term gains, especially given the optimal holding period of 1 day.
+Lastly, the <strong>Optimal Holding Period</strong> is <span style='color:limegreen;'>1 day</span>, suggesting that historically, the best returns have been achieved over very short holding periods.
 
-<strong>Considerations:</strong> Investors should proceed with caution, keeping a close eye on news sentiment and market movements. Further research and continuous monitoring of the stock's performance and any new developments are essential to make informed decisions.
-
-Be careful with any decision and monitor and research further.
+In conclusion, CarParts.com shows a potential for short-term gains due to its high Uprise Score and low current price relative to its peak. However, the slightly negative AI price prediction and neutral news sentiment suggest caution. Investors should carefully monitor the stock and consider its moderate fundamental health before making any decisions. Continuous research and vigilance are essential to navigate the potential risks and opportunities this stock presents.
 ```</p>
         </div>
         <!-- Investor Interest Charts -->
