@@ -272,7 +272,7 @@
                 <div class="gauge-container">
                     <div class="gauge" id="news-articles-gauge" data-toggle="tooltip" title="Number & sentiment of news articles analyzed past 3 days.">
                         <div><span class="news-polarity-label" style="color: limegreen; font-size: 14px; top:-35px ">Slightly Positive</span></div>
-                        <span style="color: inherit;">12</span>
+                        <span style="color: inherit;">14</span>
                         <div class="gauge-label">News Articles</div>
                     </div>
                     <div class="gauge" id="uprise-score-gauge" data-toggle="tooltip" title="Uprise score based on recent data">
@@ -301,56 +301,28 @@
         <!-- Collapsible button for the report -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="Click to see the detailed stock report.">Investment Report Summary</button>
         <div class="content report-summary-content animated-fade-in">
-            <p style="text-align: left; padding: 10px;"><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kingsoft Stock Analysis</title>
-</head>
-<body>
-
-<h2>Kingsoft Stock Analysis</h2>
-
+            <p style="text-align: left; padding: 10px;">```html
 <ul>
-    <li><span style='color:yellow;'><strong>Uprise Score:</strong></span> <span style='color:limegreen;'>65.1</span></li>
-    <li><span style='color:yellow;'><strong>AI-Based Price Change Prediction:</strong></span> <span style='color:limegreen;'>-0.0%</span></li>
-    <li><span style='color:yellow;'><strong>Price Volatility Today:</strong></span> <span style='color:limegreen;'>Min -2.6%, Max 2.5%</span> (Total volatility: <span style='color:limegreen;'>5.1%</span>)</li>
-    <li><span style='color:yellow;'><strong>Interest Change:</strong></span> <span style='color:#FF7276;'>-17.4%</span></li>
-    <li><span style='color:yellow;'><strong>Yearly Investor Interest:</strong></span> <span style='color:limegreen;'>53.52112676056338%</span></li>
-    <li><span style='color:yellow;'><strong>Current Price (%) vs. 365 day Peak:</strong></span> <span style='color:limegreen;'>25.6%</span></li>
-    <li><span style='color:yellow;'><strong>News Sentiment:</strong></span> <span style='color:limegreen;'>Polarity 0.1, 12 articles</span></li>
-    <li><span style='color:yellow;'><strong>Price to Uprise Score Correlation:</strong></span> <span style='color:limegreen;'>92.7%</span></li>
-    <li><span style='color:yellow;'><strong>Fundamental Score:</strong></span> <span style='color:#FF7276;'>46.0</span></li>
-    <li><span style='color:yellow;'><strong>Optimal Holding Period:</strong></span> <span style='color:limegreen;'>60 days</span></li>
+  <li><strong><span style='color:yellow;'>Uprise Score:</span></strong> <span style='color:limegreen;'>65.1</span></li>
+  <li><strong><span style='color:yellow;'>AI-Based Price Change Prediction:</span></strong> <span style='color:limegreen;'>-0.0%</span></li>
+  <li><strong><span style='color:yellow;'>Price Volatility Today:</span></strong> <span style='color:limegreen;'>5.1%</span> (low)</li>
+  <li><strong><span style='color:yellow;'>Interest Change:</span></strong> <span style='color:#FF7276;'>-17.4%</span> (light negative trend)</li>
+  <li><strong><span style='color:yellow;'>Yearly Investor Interest:</span></strong> <span style='color:limegreen;'>53.52%</span> (moderate)</li>
+  <li><strong><span style='color:yellow;'>Current Price (%) vs. 365 day Peak:</span></strong> <span style='color:limegreen;'>25.6%</span> (low, good)</li>
+  <li><strong><span style='color:yellow;'>News Sentiment:</span></strong> <span style='color:limegreen;'>0.1</span> (positive)</li>
+  <li><strong><span style='color:yellow;'>Price to Uprise Score Correlation:</span></strong> <span style='color:limegreen;'>92.7%</span> (strong)</li>
+  <li><strong><span style='color:yellow;'>Fundamental Score:</span></strong> <span style='color:#FF7276;'>46.0</span> (unhealthy)</li>
+  <li><strong><span style='color:yellow;'>Optimal Holding Period:</span></strong> <span style='color:limegreen;'>60 days</span></li>
 </ul>
 
-<h3>Summary</h3>
-<p>The analysis of Kingsoft stock shows a mixed picture with some positive indicators and some areas of concern:</p>
+<strong>Summary:</strong> The analysis of Kingsoft stock reveals a mixed but cautiously optimistic outlook. The <span style='color:limegreen;'>Uprise Score of 65.1</span> suggests high potential for a price spike. The <span style='color:limegreen;'>AI-Based Price Change Prediction of -0.0%</span> indicates stability within the acceptable range. Today's <span style='color:limegreen;'>price volatility of 5.1%</span> is low, implying limited immediate risk. 
 
-<ul>
-    <li>The <strong>Uprise Score</strong> is <span style='color:limegreen;'>65.1</span>, indicating a high potential for a price spike.</li>
-    <li>The <strong>AI-Based Price Change Prediction</strong> is <span style='color:limegreen;'>-0.0%</span>, showing stability in the price range.</li>
-    <li>The <strong>Price Volatility Today</strong> is low at <span style='color:limegreen;'>5.1%</span>, suggesting minimal price fluctuations.</li>
-    <li>The <strong>Interest Change</strong> is <span style='color:#FF7276;'>-17.4%</span>, indicating a negative trend in the short-term interest.</li>
-    <li>The <strong>Yearly Investor Interest</strong> is <span style='color:limegreen;'>53.52112676056338%</span>, reflecting moderate interest from investors.</li>
-    <li>The <strong>Current Price (%) vs. 365 day Peak</strong> is <span style='color:limegreen;'>25.6%</span>, suggesting the stock is in a favorable lower range.</li>
-    <li>The <strong>News Sentiment</strong> is slightly positive with a polarity of <span style='color:limegreen;'>0.1</span> based on <span style='color:limegreen;'>12 articles</span>.</li>
-    <li>The <strong>Price to Uprise Score Correlation</strong> is <span style='color:limegreen;'>92.7%</span>, showing strong predictability.</li>
-    <li>The <strong>Fundamental Score</strong> is <span style='color:#FF7276;'>46.0</span>, indicating the financial health of the company is somewhat unhealthy.</li>
-    <li>The <strong>Optimal Holding Period</strong> is <span style='color:limegreen;'>60 days</span>, suggesting past best return timeframe.</li>
-</ul>
+However, the <span style='color:#FF7276;'>-17.4% Interest Change</span> indicates a light negative short-term trend, though the <span style='color:limegreen;'>53.52% Yearly Investor Interest</span> remains moderate. The <span style='color:limegreen;'>Current Price of 25.6% vs. 365-day Peak</span> is low, indicating a good potential entry point. 
 
-<p>Given the mixed indicators, it's crucial to weigh both the risks and opportunities:</p>
+The <span style='color:limegreen;'>0.1 News Sentiment</span> is slightly positive, and the <span style='color:limegreen;'>92.7% Price to Uprise Score Correlation</span> shows strong predictability. However, the <span style='color:#FF7276;'>Fundamental Score of 46.0</span> suggests financial health concerns. The <span style='color:limegreen;'>Optimal Holding Period of 60 days</span> aligns with the potential for short-term gains.
 
-<p><strong>Opportunities:</strong> The high <span style='color:limegreen;'>Uprise Score</span>, stable <span style='color:limegreen;'>AI-Based Price Change Prediction</span>, low <span style='color:limegreen;'>Price Volatility</span>, and strong <span style='color:limegreen;'>Price to Uprise Score Correlation</span> suggest potential for growth and price stability. The stock's position relative to its 365-day peak indicates a favorable entry point.</p>
-
-<p><strong>Risks:</strong> The negative <span style='color:#FF7276;'>Interest Change</span> and somewhat unhealthy <span style='color:#FF7276;'>Fundamental Score</span> raise concerns about the company's short-term interest and financial health. The moderate <span style='color:limegreen;'>Yearly Investor Interest</span> suggests a need for cautious optimism.</p>
-
-<p><strong>Considerations:</strong> Monitor the stock closely, especially the news sentiment and interest changes. Continued research and updated data analysis are essential to make informed decisions. Be cautious and consider the mixed financial health indicators before making significant investments.</p>
-
-</body>
-</html></p>
+In conclusion, while there are opportunities for growth as indicated by the Uprise Score and low current price, the negative interest change and fundamental health score suggest caution. Investors should carefully monitor ongoing data and news, and consider the mixed signals before making any decisions.
+```</p>
         </div>
         <!-- Investor Interest Charts -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="How many people are visiting informational pages daily about the company.">
@@ -469,7 +441,7 @@
                 setGaugeColor('uprise-score-gauge', 65.1);
                 setGaugeColor('investor-interest-gauge', 53.5);
                 setGaugeColor('past-accuracy-gauge', 92.7);
-                setGaugeColor('news-articles-gauge', 12);
+                setGaugeColor('news-articles-gauge', 14);
                 setGaugeColor('fundamental-overall-gauge', 46.0);
 
                 var coll = document.getElementsByClassName("collapsible");
