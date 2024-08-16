@@ -22,7 +22,7 @@
             text-align: center;
         }
         .container {
-            width: 80%;
+            width: 100%;
             max-width: 1000px;
             margin: auto;
             padding: 20px;
@@ -103,7 +103,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 10px;
+            padding: 2px;
             border: 2px solid #0b0;
             border-radius: 10px;
             background-color: #252525;
@@ -159,8 +159,8 @@
             background-color: #2e2e2e;
             display: flex;
             justify-content: center;
-            padding: 2px;
-            margin-top: 80px;
+            padding: 0px;
+            margin-top: 10px;
         }
         .chart-btn.active {
             background-color: #ff5700;
@@ -211,15 +211,21 @@
             animation: fadeIn 1s ease-in-out;
         }
         @media (max-width: 600px) {
-            .collapsible, .content p, .content h2, .content h3 {
+             .content p, .content h2, .content h3 {
                 font-size: 14px;
+            }
+            .collapsible{
+                font-size:12px;
+            }
+            .ai-bar-values span {
+                font-size: 15px;
             }
             .gauge{
                 width:80px;
                 height:80px;
             }
             .report-summary-content {
-                font-size: 14px; /* Adjust this value as needed */
+                font-size: 12px; /* Adjust this value as needed */
             }
             
             .collapsible {
@@ -233,7 +239,7 @@
                 overflow: auto;
             }
             .gauge-label {
-                font-size: 12px;
+                font-size: 11px;
                 font-weight: bold;
                 margin-top: 10px;
             }
@@ -272,7 +278,7 @@
                 <div class="gauge-container">
                     <div class="gauge" id="news-articles-gauge" data-toggle="tooltip" title="Number & sentiment of news articles analyzed past 3 days.">
                         <div><span class="news-polarity-label" style="color: limegreen; font-size: 14px; top:-35px ">Slightly Positive</span></div>
-                        <span style="color: inherit;">13</span>
+                        <span style="color: inherit;">14</span>
                         <div class="gauge-label">News Articles</div>
                     </div>
                     <div class="gauge" id="uprise-score-gauge" data-toggle="tooltip" title="Uprise score based on recent data">
@@ -303,28 +309,26 @@
         <div class="content report-summary-content animated-fade-in">
             <p style="text-align: left; padding: 10px;">```html
 <ul>
-    <li><span style='color:yellow;'>Uprise Score:</span> <span style='color:limegreen;'>71.6</span></li>
-    <li><span style='color:yellow;'>AI-Based Price Change Prediction:</span> <span style='color:limegreen;'>0.5%</span></li>
-    <li><span style='color:yellow;'>Price Volatility Today:</span> Min <span style='color:#FF7276;'>-2.3%</span>, Max <span style='color:limegreen;'>3.4%</span> - Total volatility: <span style='color:limegreen;'>5.7%</span> (low)</li>
-    <li><span style='color:yellow;'>Interest Change:</span> <span style='color:limegreen;'>173.1%</span></li>
-    <li><span style='color:yellow;'>Yearly Investor Interest:</span> <span style='color:limegreen;'>100.0%</span></li>
-    <li><span style='color:yellow;'>Current Price (%) vs. 365 day Peak:</span> <span style='color:limegreen;'>29.8%</span></li>
-    <li><span style='color:yellow;'>News Sentiment:</span> Polarity <span style='color:limegreen;'>0.1</span>, 13 articles</li>
-    <li><span style='color:yellow;'>Price to Uprise Score Correlation:</span> <span style='color:limegreen;'>77.8%</span></li>
-    <li><span style='color:yellow;'>Fundamental Score:</span> <span style='color:#FF7276;'>44.0</span></li>
-    <li><span style='color:yellow;'>Optimal Holding Period:</span> <span style='color:limegreen;'>10 days</span></li>
+    <li><span style='color:yellow;'><strong>Uprise Score:</strong></span> <span style='color:limegreen;'>71.6</span></li>
+    <li><span style='color:yellow;'><strong>AI-Based Price Change Prediction:</strong></span> <span style='color:limegreen;'>0.5%</span></li>
+    <li><span style='color:yellow;'><strong>Price Volatility Today:</strong></span> <span style='color:limegreen;'>5.7%</span> (Low)</li>
+    <li><span style='color:yellow;'><strong>Interest Change:</strong></span> <span style='color:limegreen;'>173.1%</span> (Very Strong)</li>
+    <li><span style='color:yellow;'><strong>Yearly Investor Interest:</strong></span> <span style='color:limegreen;'>100.0%</span> (Peak)</li>
+    <li><span style='color:yellow;'><strong>Current Price (%) vs. 365 day Peak:</strong></span> <span style='color:limegreen;'>29.8%</span> (Low, Good)</li>
+    <li><span style='color:yellow;'><strong>News Sentiment:</strong></span> <span style='color:limegreen;'>0.1</span>, 14 articles (Few Articles)</li>
+    <li><span style='color:yellow;'><strong>Price to Uprise Score Correlation:</strong></span> <span style='color:limegreen;'>77.8%</span> (Good)</li>
+    <li><span style='color:yellow;'><strong>Fundamental Score:</strong></span> <span style='color:#FF7276;'>44.0</span> (Unhealthy)</li>
+    <li><span style='color:yellow;'><strong>Optimal Holding Period:</strong></span> <span style='color:limegreen;'>10 days</span></li>
 </ul>
 
-<strong>Summary:</strong>
-GeoVax exhibits several promising indicators that suggest potential for short-term gains. The <strong>Uprise Score</strong> of <span style='color:limegreen;'>71.6</span> is well above the threshold of 60, indicating high potential for a price spike. The <strong>AI-Based Price Change Prediction</strong> of <span style='color:limegreen;'>0.5%</span> falls within a stable range, suggesting limited immediate downside risk. Today's <strong>Price Volatility</strong> is low, which is generally positive for stability in the stock. 
+<h2>Summary</h2>
+GeoVax currently presents a mixed yet intriguing investment opportunity. The <strong>Uprise Score</strong> of <span style='color:limegreen;'>71.6</span> suggests a high potential for a price spike, which is promising for short-term gains. The <strong>AI-Based Price Change Prediction</strong> of <span style='color:limegreen;'>0.5%</span> falls within a stable range, indicating minimal risk of dramatic price fluctuations. Additionally, the <strong>Price Volatility Today</strong> is <span style='color:limegreen;'>5.7%</span>, classified as low, which suggests a stable trading environment.
 
-The <strong>Interest Change</strong> of <span style='color:limegreen;'>173.1%</span> and <strong>Yearly Investor Interest</strong> at <span style='color:limegreen;'>100.0%</span> indicate strong investor sentiment and could fuel further price appreciation. The <strong>Current Price compared to the 365-day Peak</strong> is at <span style='color:limegreen;'>29.8%</span>, suggesting the stock is in a lower range and may have room to grow. 
+Interest in GeoVax has surged, with a remarkable <strong>Interest Change</strong> of <span style='color:limegreen;'>173.1%</span> and <strong>Yearly Investor Interest</strong> peaking at <span style='color:limegreen;'>100.0%</span>. The stock's current pricing at <span style='color:limegreen;'>29.8%</span> of its 365-day peak indicates it is in a low yet advantageous buying range. The <strong>News Sentiment</strong> of <span style='color:limegreen;'>0.1</span> from 14 articles implies a mildly positive market mood, with fewer articles suggesting sensitivity to news, which could result in quick price movements.
 
-The <strong>News Sentiment</strong> is slightly positive with a polarity of <span style='color:limegreen;'>0.1</span> from 13 articles, which is a moderate number of articles, implying some sensitivity to news. The <strong>Price to Uprise Score Correlation</strong> is <span style='color:limegreen;'>77.8%</span>, indicating a good predictability of price movements based on the Uprise Score. 
+The <strong>Price to Uprise Score Correlation</strong> of <span style='color:limegreen;'>77.8%</span> signifies good predictability, aligning well with the potential for price spikes. However, the <strong>Fundamental Score</strong> is a concern at <span style='color:#FF7276;'>44.0</span>, indicating unhealthy financial health, which warrants cautious investment. The <strong>Optimal Holding Period</strong> of <span style='color:limegreen;'>10 days</span> suggests that the best returns have historically been realized within this short-term frame.
 
-However, the <strong>Fundamental Score</strong> of <span style='color:#FF7276;'>44.0</span> is concerning, as it suggests the company's financial health is unhealthy. The <strong>Optimal Holding Period</strong> of <span style='color:limegreen;'>10 days</span> indicates a short-term strategy may be best.
-
-While GeoVax appears to have strong potential for short-term gains, the unhealthy fundamental score introduces a level of risk. Investors should be cautious, making sure to monitor ongoing news and market conditions closely. Further research and due diligence are advised to mitigate risks and capitalize on potential opportunities.
+In conclusion, while GeoVax exhibits several positive indicators for short-term investment, such as high uprise potential, stable price change prediction, and strong interest change, the unhealthy fundamental score raises a red flag. Investors should proceed with caution, continuously monitor the stock, and conduct further research to mitigate risks. Investing in GeoVax could be considered a speculative play with potential upside, but it's crucial to stay vigilant and be prepared for quick adjustments based on emerging data.
 ```</p>
         </div>
         <!-- Investor Interest Charts -->
@@ -444,7 +448,7 @@ While GeoVax appears to have strong potential for short-term gains, the unhealth
                 setGaugeColor('uprise-score-gauge', 71.6);
                 setGaugeColor('investor-interest-gauge', 100.0);
                 setGaugeColor('past-accuracy-gauge', 77.8);
-                setGaugeColor('news-articles-gauge', 13);
+                setGaugeColor('news-articles-gauge', 14);
                 setGaugeColor('fundamental-overall-gauge', 44.0);
 
                 var coll = document.getElementsByClassName("collapsible");
