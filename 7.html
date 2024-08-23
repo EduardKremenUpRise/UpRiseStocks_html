@@ -310,36 +310,49 @@
         <!-- Collapsible button for the report -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="Click to see the detailed stock report.">Investment Report Summary</button>
         <div class="content report-summary-content animated-fade-in">
-            <p style="text-align: left; padding: 10px;">```html
-<ul>
-    <li><span style='color:yellow;'>Uprise Score:</span> <span style='color:limegreen;'>62.2</span></li>
-    <li><span style='color:yellow;'>AI-Based Price Change Prediction:</span> <span style='color:limegreen;'>0.3%</span></li>
-    <li><span style='color:yellow;'>Price Volatility Today:</span> Min <span style='color:#FF7276;'>-2.0%</span>, Max <span style='color:limegreen;'>3.1%</span>, Total volatility: <span style='color:limegreen;'>5.1%</span></li>
-    <li><span style='color:yellow;'>Interest Change:</span> <span style='color:limegreen;'>5.4%</span></li>
-    <li><span style='color:yellow;'>Yearly Investor Interest:</span> <span style='color:limegreen;'>47.98%</span></li>
-    <li><span style='color:yellow;'>Current Price (%) vs. 365 day Peak:</span> <span style='color:limegreen;'>49.9%</span></li>
-    <li><span style='color:yellow;'>News Sentiment:</span> Polarity <span style='color:limegreen;'>0.2</span>, 12 articles</li>
-    <li><span style='color:yellow;'>Price to Uprise Score Correlation:</span> <span style='color:limegreen;'>86.7%</span></li>
-    <li><span style='color:yellow;'>Fundamental Score:</span> <span style='color:#FF7276;'>33.0</span></li>
-    <li><span style='color:yellow;'>Optimal Holding Period:</span> <span style='color:limegreen;'>60 days</span></li>
-</ul>
-
-<strong>Summary:</strong>
-
-The analysis of Remitly stock reveals several key indicators that suggest both opportunities and risks. 
-
-- The <strong>Uprise Score</strong> of <span style='color:limegreen;'>62.2</span> indicates that there is a high potential for a price spike.
-- The <strong>AI-Based Price Change Prediction</strong> of <span style='color:limegreen;'>0.3%</span> falls within the stability range, suggesting minimal expected price change.
-- Today's <strong>Price Volatility</strong> is classified as low with a total volatility of <span style='color:limegreen;'>5.1%</span>, indicating stable price movements.
-- A positive <strong>Interest Change</strong> of <span style='color:limegreen;'>5.4%</span> suggests a positive short-term trend.
-- A <strong>Yearly Investor Interest</strong> of <span style='color:limegreen;'>47.98%</span> is moderate, indicating a reasonable level of investor engagement.
-- The <strong>Current Price vs. 365 day Peak</strong> at <span style='color:limegreen;'>49.9%</span> suggests that the stock is in the lower range of its yearly high, possibly offering a buying opportunity.
-- <strong>News Sentiment</strong> is moderately positive at <span style='color:limegreen;'>0.2</span> with 12 articles, indicating a generally favorable outlook but also sensitivity to news.
-- The <strong>Price to Uprise Score Correlation</strong> of <span style='color:limegreen;'>86.7%</span> shows strong predictability, a good sign for potential investors.
-- However, the <strong>Fundamental Score</strong> of <span style='color:#FF7276;'>33.0</span> indicates poor financial health, which is a significant risk factor.
-- The <strong>Optimal Holding Period</strong> of <span style='color:limegreen;'>60 days</span> suggests that the best returns have historically been achieved over this timeframe.
-
-Overall, while there are promising signs such as high potential for a price spike, low volatility, and strong predictability, the poor fundamental score and moderate news sentiment indicate that caution is necessary. Investors should monitor the stock closely, conduct further research, and consider their risk tolerance before making any decisions. It is crucial to keep an eye on ongoing data and market conditions to make well-informed investment choices.</p>
+            <p style="text-align: left; padding: 10px;"><!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .indicator-name {
+            color: yellow;
+        }
+        .positive {
+            color: limegreen;
+        }
+        .negative {
+            color: #FF7276;
+        }
+    </style>
+</head>
+<body>
+    <h2>Remitly Stock Analysis</h2>
+    <ul>
+        <li><span class="indicator-name">Uprise Score:</span> <strong><span class="positive">62.2</span></strong></li>
+        <li><span class="indicator-name">AI-Based Price Change Prediction:</span> <strong><span class="positive">0.3%</span></strong></li>
+        <li><span class="indicator-name">Price Volatility Today:</span> <strong><span class="positive">5.1% (low)</span></strong></li>
+        <li><span class="indicator-name">Interest Change:</span> <strong><span class="positive">5.4%</span></strong></li>
+        <li><span class="indicator-name">Yearly Investor Interest:</span> <strong><span class="positive">47.98%</span></strong></li>
+        <li><span class="indicator-name">Current Price (%) vs. 365 day Peak:</span> <strong><span class="positive">49.9%</span></strong></li>
+        <li><span class="indicator-name">News Sentiment:</span> <strong><span class="positive">Polarity 0.2, 12 articles</span></strong></li>
+        <li><span class="indicator-name">Price to Uprise Score Correlation:</span> <strong><span class="positive">86.7%</span></strong></li>
+        <li><span class="indicator-name">Fundamental Score:</span> <strong><span class="negative">33.0</span></strong></li>
+        <li><span class="indicator-name">Optimal Holding Period:</span> <strong><span class="positive">60 days</span></strong></li>
+    </ul>
+    
+    <h3>Summary</h3>
+    <p>
+        Based on the above indicators, the stock of <strong>Remitly</strong> presents a mixed but generally positive outlook. The <span class="indicator-name">Uprise Score</span> of <span class="positive">62.2</span> and <span class="indicator-name">AI-Based Price Change Prediction</span> of <span class="positive">0.3%</span> suggest potential for upward movement. Additionally, the <span class="indicator-name">Price Volatility Today</span> is <span class="positive">low</span>, indicating stability, and the <span class="indicator-name">Interest Change</span> of <span class="positive">5.4%</span> suggests a positive short-term trend. <span class="indicator-name">Yearly Investor Interest</span> at <span class="positive">47.98%</span> shows moderate interest, and the stock's <span class="indicator-name">Current Price (%) vs. 365 day Peak</span> at <span class="positive">49.9%</span> places it in a favorable lower range.
+    </p>
+    <p>
+        The <span class="indicator-name">News Sentiment</span> is moderately positive with a polarity of <span class="positive">0.2</span> across <span class="positive">12 articles</span>, suggesting some positive sentiment but moderate sensitivity to news. The <span class="indicator-name">Price to Uprise Score Correlation</span> is strong at <span class="positive">86.7%</span>, indicating good predictability. However, the <span class="indicator-name">Fundamental Score</span> is a concern at <span class="negative">33.0</span>, indicating poor financial health.
+    </p>
+    <p>
+        Overall, the <span class="indicator-name">Optimal Holding Period</span> of <span class="positive">60 days</span> suggests that the stock may be best suited for a medium-term holding period. <strong>Risk:</strong> The low <span class="indicator-name">Fundamental Score</span> is a significant risk, indicating potential financial instability. <strong>Opportunity:</strong> The positive indicators provide opportunities for gains, particularly given the strong <span class="indicator-name">Price to Uprise Score Correlation</span> and low <span class="indicator-name">Price Volatility</span>. <strong>Considerations:</strong> Investors should closely monitor ongoing financial performance and market conditions, and remain cautious given the poor financial health score. 
+    </p>
+    <p><strong>Note:</strong> Be careful with any decision and continue to monitor and research further.</p>
+</body>
+</html></p>
         </div>
         <!-- Investor Interest Charts -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="How many people are visiting informational pages daily about the company.">
