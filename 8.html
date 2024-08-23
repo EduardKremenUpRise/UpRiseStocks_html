@@ -281,7 +281,7 @@
                 <div class="gauge-container">
                     <div class="gauge" id="news-articles-gauge" data-toggle="tooltip" title="Number & sentiment of news articles analyzed past 3 days.">
                         <div><span class="news-polarity-label" style="color: limegreen; font-size: 14px; top:-35px ">Slightly Positive</span></div>
-                        <span style="color: inherit;">56</span>
+                        <span style="color: inherit;">58</span>
                         <div class="gauge-label">News Articles</div>
                     </div>
                     <div class="gauge" id="uprise-score-gauge" data-toggle="tooltip" title="Uprise score based on recent data">
@@ -310,38 +310,64 @@
         <!-- Collapsible button for the report -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="Click to see the detailed stock report.">Investment Report Summary</button>
         <div class="content report-summary-content animated-fade-in">
-            <p style="text-align: left; padding: 10px;"><html>
+            <p style="text-align: left; padding: 10px;"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPeng Stock Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .indicator-name { color: yellow; }
+        .positive { color: limegreen; }
+        .negative { color: #FF7276; }
+    </style>
+</head>
 <body>
+
 <h2>XPeng Stock Analysis</h2>
 
 <ul>
-  <li><strong><span style='color:yellow;'>Uprise Score:</span></strong> <span style='color:limegreen;'>61.8</span></li>
-  <li><strong><span style='color:yellow;'>AI-Based Price Change Prediction:</span></strong> <span style='color:#FF7276;'>-0.1%</span></li>
-  <li><strong><span style='color:yellow;'>Price Volatility Today:</span></strong> <span style='color:limegreen;'>5.2% (low)</span></li>
-  <li><strong><span style='color:yellow;'>Interest Change:</span></strong> <span style='color:#FF7276;'>-23.3%</span></li>
-  <li><strong><span style='color:yellow;'>Yearly Investor Interest:</span></strong> <span style='color:limegreen;'>51.0%</span></li>
-  <li><strong><span style='color:yellow;'>Current Price (%) vs. 365 day Peak:</span></strong> <span style='color:limegreen;'>29.5%</span></li>
-  <li><strong><span style='color:yellow;'>News Sentiment:</span></strong> <span style='color:limegreen;'>Polarity 0.1</span> with <span style='color:limegreen;'>56 articles</span></li>
-  <li><strong><span style='color:yellow;'>Price to Uprise Score Correlation:</span></strong> <span style='color:limegreen;'>87.3%</span></li>
-  <li><strong><span style='color:yellow;'>Fundamental Score:</span></strong> <span style='color:#FF7276;'>40.0</span></li>
-  <li><strong><span style='color:yellow;'>Optimal Holding Period:</span></strong> <span style='color:limegreen;'>60 days</span></li>
+    <li><strong class="indicator-name">Uprise Score:</strong> <span class="positive">61.8</span></li>
+    <li><strong class="indicator-name">AI-Based Price Change Prediction:</strong> <span class="negative">-0.1%</span></li>
+    <li><strong class="indicator-name">Price Volatility Today:</strong> <span class="positive">Min -2.6%, Max 2.6%</span></li>
+    <li><strong class="indicator-name">Interest Change:</strong> <span class="negative">-23.3%</span></li>
+    <li><strong class="indicator-name">Yearly Investor Interest:</strong> <span class="positive">51.018%</span></li>
+    <li><strong class="indicator-name">Current Price (%) vs. 365 day Peak:</strong> <span class="positive">29.5%</span></li>
+    <li><strong class="indicator-name">News Sentiment:</strong> <span class="positive">Polarity 0.1, 58 articles</span></li>
+    <li><strong class="indicator-name">Price to Uprise Score Correlation:</strong> <span class="positive">87.3%</span></li>
+    <li><strong class="indicator-name">Fundamental Score:</strong> <span class="negative">40.0</span></li>
+    <li><strong class="indicator-name">Optimal Holding Period:</strong> <span class="positive">60 days</span></li>
 </ul>
 
 <h3>Summary</h3>
-<p>The analysis of XPeng stock reveals a mix of positive and negative indicators. The <strong><span style='color:yellow;'>Uprise Score</span></strong> of <span style='color:limegreen;'>61.8</span> suggests high potential for a price spike, which is promising. However, the <strong><span style='color:yellow;'>AI-Based Price Change Prediction</span></strong> of <span style='color:#FF7276;'>-0.1%</span> indicates a slight predicted decline, although it is within the stability range.</p>
-
-<p>The <strong><span style='color:yellow;'>Price Volatility Today</span></strong> is <span style='color:limegreen;'>5.2%</span>, classified as low, which indicates stability. The <strong><span style='color:yellow;'>Interest Change</span></strong> of <span style='color:#FF7276;'>-23.3%</span> signals a negative short-term trend. Conversely, the <strong><span style='color:yellow;'>Yearly Investor Interest</span></strong> at <span style='color:limegreen;'>51.0%</span> is moderate, denoting a steady interest in the stock.</p>
-
-<p>The <strong><span style='color:yellow;'>Current Price (%) vs. 365 day Peak</span></strong> of <span style='color:limegreen;'>29.5%</span> is in the lower range, indicating potential for growth. The <strong><span style='color:yellow;'>News Sentiment</span></strong> is slightly positive with a polarity of <span style='color:limegreen;'>0.1</span> and a high number of articles (<span style='color:limegreen;'>56</span>), which can dilute the impact of any single news article.</p>
-
-<p><strong><span style='color:yellow;'>Price to Uprise Score Correlation</span></strong> is strong at <span style='color:limegreen;'>87.3%</span>, suggesting high predictability of the stock's price movements based on the Uprise Score. However, the <strong><span style='color:yellow;'>Fundamental Score</span></strong> of <span style='color:#FF7276;'>40.0</span> indicates the company's financial health is unhealthy, which is a significant risk factor.</p>
-
-<p>Lastly, the <strong><span style='color:yellow;'>Optimal Holding Period</span></strong> is <span style='color:limegreen;'>60 days</span>, suggesting a short-term holding strategy based on historical performance.</p>
-
-<h3>Consultation</h3>
-<p>XPeng presents a mixed bag of risk and opportunity. The high <strong><span style='color:yellow;'>Uprise Score</span></strong> and strong <strong><span style='color:yellow;'>Price to Uprise Score Correlation</span></strong> point to potential for significant price gains. However, the negative <strong><span style='color:yellow;'>AI-Based Price Change Prediction</span></strong> and <strong><span style='color:yellow;'>Interest Change</span></strong> should be noted as cautionary signs. The stock's <strong><span style='color:yellow;'>Fundamental Score</span></strong> is a critical red flag, indicating financial instability that could undermine potential gains.</p>
-
-<p>Investors should weigh these factors carefully. While there are opportunities for short-term gains, the risks associated with the company's financial health cannot be overlooked. Continuous monitoring of news sentiment and market conditions is essential. It is advisable to perform further research and stay updated with the latest financial reports and market analyses before making any investment decisions.</p>
+<p>
+XPeng shows a mixed bag of indicators that demand careful consideration:
+</p>
+<p>
+The <strong class="indicator-name">Uprise Score</strong> of <span class="positive">61.8</span> points to a high potential for a price spike. However, the <strong class="indicator-name">AI-Based Price Change Prediction</strong> of <span class="negative">-0.1%</span> suggests near-term caution. <strong class="indicator-name">Price Volatility</strong> is controlled at <span class="positive">5.2%</span>, which is low and generally favorable for stability.
+</p>
+<p>
+A <strong class="indicator-name">Interest Change</strong> of <span class="negative">-23.3%</span> points towards a negative short-term trend, but it is still in the light category. The <strong class="indicator-name">Yearly Investor Interest</strong> stands at a moderate <span class="positive">51.018%</span>, indicating decent but not overwhelming investor engagement.
+</p>
+<p>
+The <strong class="indicator-name">Current Price vs. 365 day Peak</strong> being at <span class="positive">29.5%</span> signals a low price which is good for potential gains. The <strong class="indicator-name">News Sentiment</strong> shows a slightly positive polarity of <span class="positive">0.1</span> with <span class="positive">58 articles</span>, suggesting general positivity but requiring monitoring for any shifts.
+</p>
+<p>
+The <strong class="indicator-name">Price to Uprise Score Correlation</strong> of <span class="positive">87.3%</span> indicates strong predictability of price movement based on the Uprise Score, which is favorable. However, the <strong class="indicator-name">Fundamental Score</strong> of <span class="negative">40.0</span> indicates financial health concerns.
+</p>
+<p>
+The <strong class="indicator-name">Optimal Holding Period</strong> of <span class="positive">60 days</span> suggests a well-defined timeframe for potential returns, but this should be validated with ongoing data.
+</p>
+<p>
+<strong>Risk:</strong> Negative short-term interest change and a low Fundamental Score indicate potential financial instability.
+</p>
+<p>
+<strong>Opportunity:</strong> High Uprise Score, strong price correlation, and a favorable current price vs. 365-day peak offer potential for gains.
+</p>
+<p>
+<strong>Considerations:</strong> Be cautious due to mixed signals. Regularly monitor news sentiment and interest changes. Conduct further research and stay updated with ongoing financial health checks.
+</p>
 
 </body>
 </html></p>
@@ -463,7 +489,7 @@
                 setGaugeColor('uprise-score-gauge', 61.8);
                 setGaugeColor('investor-interest-gauge', 51.0);
                 setGaugeColor('past-accuracy-gauge', 87.3);
-                setGaugeColor('news-articles-gauge', 56);
+                setGaugeColor('news-articles-gauge', 58);
                 setGaugeColor('fundamental-overall-gauge', 40.0);
 
                 var coll = document.getElementsByClassName("collapsible");
