@@ -281,7 +281,7 @@
                 <div class="gauge-container">
                     <div class="gauge" id="news-articles-gauge" data-toggle="tooltip" title="Number & sentiment of news articles analyzed past 3 days.">
                         <div><span class="news-polarity-label" style="color: limegreen; font-size: 14px; top:-35px ">Positive</span></div>
-                        <span style="color: inherit;">52</span>
+                        <span style="color: inherit;">71</span>
                         <div class="gauge-label">News Articles</div>
                     </div>
                     <div class="gauge" id="uprise-score-gauge" data-toggle="tooltip" title="Uprise score based on recent data">
@@ -310,32 +310,44 @@
         <!-- Collapsible button for the report -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="Click to see the detailed stock report.">Investment Report Summary</button>
         <div class="content report-summary-content animated-fade-in">
-            <p style="text-align: left; padding: 10px;">```html
+            <p style="text-align: left; padding: 10px;"><!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .indicator-name {
+    color: yellow;
+  }
+</style>
+</head>
+<body>
+
 <ul>
-    <li><strong><span style='color:yellow;'>Uprise Score:</span></strong> <span style='color:limegreen;'>84.7</span></li>
-    <li><strong><span style='color:yellow;'>AI-Based Price Change Prediction:</span></strong> <span style='color:#FF7276;'>-0.2%</span></li>
-    <li><strong><span style='color:yellow;'>Price Volatility Today:</span></strong> <span style='color:limegreen;'>4.9%</span> (classified as low)</li>
-    <li><strong><span style='color:yellow;'>Interest Change:</span></strong> <span style='color:limegreen;'>114.1%</span></li>
-    <li><strong><span style='color:yellow;'>Yearly Investor Interest:</span></strong> <span style='color:limegreen;'>100.0%</span></li>
-    <li><strong><span style='color:yellow;'>Current Price (%) vs. 365 day Peak:</span></strong> <span style='color:#FF7276;'>34.2%</span></li>
-    <li><strong><span style='color:yellow;'>News Sentiment:</span></strong> <span style='color:limegreen;'>Polarity 0.2</span>, 52 articles</li>
-    <li><strong><span style='color:yellow;'>Price to Uprise Score Correlation:</span></strong> <span style='color:limegreen;'>88.0%</span></li>
-    <li><strong><span style='color:yellow;'>Fundamental Score:</span></strong> <span style='color:#FF7276;'>40.0</span></li>
-    <li><strong><span style='color:yellow;'>Optimal Holding Period:</span></strong> <span style='color:limegreen;'>60 days</span></li>
+  <li><span class="indicator-name"><strong>Uprise Score:</strong></span> <span style='color:limegreen;'>84.7</span></li>
+  <li><span class="indicator-name"><strong>AI-Based Price Change Prediction:</strong></span> <span style='color:#FF7276;'>-0.2%</span></li>
+  <li><span class="indicator-name"><strong>Price Volatility Today:</strong></span> <span style='color:limegreen;'>4.9% (low)</span></li>
+  <li><span class="indicator-name"><strong>Interest Change:</strong></span> <span style='color:limegreen;'>114.1%</span></li>
+  <li><span class="indicator-name"><strong>Yearly Investor Interest:</strong></span> <span style='color:limegreen;'>100.0% (peak)</span></li>
+  <li><span class="indicator-name"><strong>Current Price (%) vs. 365 day Peak:</strong></span> <span style='color:#FF7276;'>34.2% (lower range)</span></li>
+  <li><span class="indicator-name"><strong>News Sentiment:</strong></span> <span style='color:limegreen;'>Polarity 0.2, 71 articles</span></li>
+  <li><span class="indicator-name"><strong>Price to Uprise Score Correlation:</strong></span> <span style='color:limegreen;'>88.0% (strong)</span></li>
+  <li><span class="indicator-name"><strong>Fundamental Score:</strong></span> <span style='color:#FF7276;'>40.0 (unhealthy)</span></li>
+  <li><span class="indicator-name"><strong>Optimal Holding Period:</strong></span> <span style='color:limegreen;'>60 days</span></li>
 </ul>
 
-<strong>Summary:</strong>
-XPeng exhibits a high <strong>Uprise Score</strong> of <span style='color:limegreen;'>84.7</span>, indicating significant potential for a price spike. However, the <strong>AI-Based Price Change Prediction</strong> reflects a slight negative change of <span style='color:#FF7276;'>-0.2%</span>, suggesting near-term caution. The <strong>Price Volatility Today</strong> is low at <span style='color:limegreen;'>4.9%</span>, which typically indicates stability.
+<h2>Summary</h2>
+<p>XPeng exhibits a strong <strong>Uprise Score</strong> of <span style='color:limegreen;'>84.7</span>, indicating high potential for a price spike. However, the <strong>AI-Based Price Change Prediction</strong> shows a slight negative trend at <span style='color:#FF7276;'>-0.2%</span>, suggesting caution. The <strong>Price Volatility</strong> is low at <span style='color:limegreen;'>4.9%</span>, which adds a layer of stability. The <strong>Interest Change</strong> is very strong at <span style='color:limegreen;'>114.1%</span>, and <strong>Yearly Investor Interest</strong> is at its peak with <span style='color:limegreen;'>100.0%</span>, both indicating significant market interest.</p>
 
-The <strong>Interest Change</strong> shows a very strong positive trend with a change of <span style='color:limegreen;'>114.1%</span>, complemented by a peak <strong>Yearly Investor Interest</strong> of <span style='color:limegreen;'>100.0%</span>. This reflects heightened attention and potential for increased stock activity. The <strong>Current Price vs. 365 day Peak</strong> is at <span style='color:#FF7276;'>34.2%</span>, placing it in the lower range, which could suggest a buying opportunity if other indicators align.
+<p>The <strong>Current Price vs. 365 day Peak</strong> is at <span style='color:#FF7276;'>34.2%</span>, falling into the lower range, which could signify a potential for future price increases. The <strong>News Sentiment</strong> is moderately positive with a <span style='color:limegreen;'>Polarity of 0.2</span> across <span style='color:limegreen;'>71 articles</span>, suggesting a balanced but cautiously optimistic media outlook. The <strong>Price to Uprise Score Correlation</strong> is very strong at <span style='color:limegreen;'>88.0%</span>, providing confidence in the reliability of the Uprise Score.</p>
 
-The <strong>News Sentiment</strong> is moderately positive with a polarity of <span style='color:limegreen;'>0.2</span> over 52 articles, indicating that the stock is not overly sensitive to individual news items. The <strong>Price to Uprise Score Correlation</strong> is strong at <span style='color:limegreen;'>88.0%</span>, reinforcing the predictive power of the Uprise Score.
+<p>However, the <strong>Fundamental Score</strong> is concerning at <span style='color:#FF7276;'>40.0</span>, indicating unhealthy financial conditions. The <strong>Optimal Holding Period</strong> is <span style='color:limegreen;'>60 days</span>, suggesting that historical data points towards favorable returns within a two-month period.</p>
 
-However, the <strong>Fundamental Score</strong> is concerning at <span style='color:#FF7276;'>40.0</span>, indicating unhealthy financial health. The optimal holding period is <span style='color:limegreen;'>60 days</span>, suggesting that the best returns have historically been realized over this timeframe.
+<p>In conclusion, while there are significant opportunities indicated by high market interest and a strong Uprise Score, potential investors should be cautious due to the negative AI-Based Price Change Prediction and the unhealthy Fundamental Score. It's essential to continuously monitor the stock and conduct further research before making any investment decisions.</p>
 
-<strong>Risk, Opportunity, and Considerations:</strong>
-XPeng demonstrates strong potential for price increase and high investor interest, which could drive the stock up in the short term. However, the negative AI-based price change prediction and unhealthy fundamental score warrant caution. Investors should monitor these indicators closely and conduct further research before making any decisions. The high interest change and yearly investor interest are positive signs, but the financial health needs improvement to sustain long-term growth. Always be prudent and keep track of ongoing developments.
-```</p>
+</body>
+</html></p>
         </div>
         <!-- Investor Interest Charts -->
         <button type="button" class="collapsible" data-toggle="tooltip" title="How many people are visiting informational pages daily about the company.">
@@ -454,7 +466,7 @@ XPeng demonstrates strong potential for price increase and high investor interes
                 setGaugeColor('uprise-score-gauge', 84.7);
                 setGaugeColor('investor-interest-gauge', 100.0);
                 setGaugeColor('past-accuracy-gauge', 88.0);
-                setGaugeColor('news-articles-gauge', 52);
+                setGaugeColor('news-articles-gauge', 71);
                 setGaugeColor('fundamental-overall-gauge', 40.0);
 
                 var coll = document.getElementsByClassName("collapsible");
