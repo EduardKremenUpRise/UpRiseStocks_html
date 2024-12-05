@@ -1,0 +1,1122 @@
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <style>
+        body {
+            background-color: #1e1e2f;
+            color: white;
+        }
+        .table-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #28293d;
+            padding: 10px;
+            border-radius: 8px;
+            overflow-x: auto; /* Horizontal scrolling */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            color: white;
+            word-wrap: break-word; /* Wrap long words */
+        }
+        th {
+            background-color: #FF5700;
+        }
+        tr.highlight {
+            background-color: rgba(0, 255, 0, 0.1);
+        }
+        tr:hover {
+            background-color: #3a3b54;
+        }
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            th, td {
+                font-size: 11px; /* Smaller font for mobile */
+                white-space: normal; /* Wrap content */
+            }
+            table {
+                display: block;
+                overflow-x: auto; /* Horizontal scrolling on mobile */
+                border-spacing: 0;
+            }
+            .table-container {
+                padding: 5px; /* Adjust padding for mobile */
+            }
+            .table-container::before {
+                content: "Swipe horizontally to see more columns →"; /* Inform users */
+                display: block;
+                font-size: 10px;
+                color: #FF5700;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <h2 style="text-align: center;">Latest Stocks Performance</h2>
+        <table id="stocksTable" class="display">
+            <thead>
+                <tr>
+                    <th>Stock Name</th>
+                    <th>Published on UpriseStocks</th>
+                    <th>Profit</th>
+                    <th>Days post publish to Max profit</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr class="">
+                    <td>10x_Genomics</td>
+                    <td data-order="2024-10-10">10, October 2024</td>
+                    <td style="color: limegreen;">10.7%</td>
+                    <td>26</td>
+                </tr>
+                
+                <tr class="">
+                    <td>23andMe</td>
+                    <td data-order="2024-09-19">19, September 2024</td>
+                    <td style="color: limegreen;">17.9%</td>
+                    <td>14</td>
+                </tr>
+                
+                <tr class="">
+                    <td>ACM_Research</td>
+                    <td data-order="2024-12-02">02, December 2024</td>
+                    <td style="color: limegreen;">5.8%</td>
+                    <td>2</td>
+                </tr>
+                
+                <tr class="">
+                    <td>AES_Corporation</td>
+                    <td data-order="2024-11-07">07, November 2024</td>
+                    <td style="color: limegreen;">2.6%</td>
+                    <td>7</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>AIM_ImmunoTech</td>
+                    <td data-order="2024-11-19">19, November 2024</td>
+                    <td style="color: limegreen;">27.8%</td>
+                    <td>7</td>
+                </tr>
+                
+                <tr class="">
+                    <td>AMC_Entertainment</td>
+                    <td data-order="2024-10-21">21, October 2024</td>
+                    <td style="color: limegreen;">17.5%</td>
+                    <td>42</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>AMC_Networks</td>
+                    <td data-order="2024-09-25">25, September 2024</td>
+                    <td style="color: limegreen;">32.3%</td>
+                    <td>57</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>AMC_Theatres</td>
+                    <td data-order="2024-10-09">09, October 2024</td>
+                    <td style="color: limegreen;">23.8%</td>
+                    <td>54</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>AMTD_Digital</td>
+                    <td data-order="2024-10-02">02, October 2024</td>
+                    <td style="color: limegreen;">33.5%</td>
+                    <td>1</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Advance_Auto_Parts</td>
+                    <td data-order="2024-11-15">15, November 2024</td>
+                    <td style="color: limegreen;">17.9%</td>
+                    <td>12</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Agfa-Gevaert</td>
+                    <td data-order="2024-11-19">19, November 2024</td>
+                    <td style="color: limegreen;">32.7%</td>
+                    <td>15</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Albemarle_Corporation</td>
+                    <td data-order="2024-10-02">02, October 2024</td>
+                    <td style="color: limegreen;">18.3%</td>
+                    <td>61</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Amarin_Corporation</td>
+                    <td data-order="2024-11-20">20, November 2024</td>
+                    <td style="color: limegreen;">12.2%</td>
+                    <td>2</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Amkor_Technology</td>
+                    <td data-order="2024-10-31">31, October 2024</td>
+                    <td style="color: limegreen;">9.0%</td>
+                    <td>7</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Anghami</td>
+                    <td data-order="2024-11-27">27, November 2024</td>
+                    <td style="color: limegreen;">0.5%</td>
+                    <td>2</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Arrowhead_Pharmaceuticals</td>
+                    <td data-order="2024-10-04">04, October 2024</td>
+                    <td style="color: limegreen;">40.0%</td>
+                    <td>59</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Athira_Pharma</td>
+                    <td data-order="2024-10-04">04, October 2024</td>
+                    <td style="color: limegreen;">88.2%</td>
+                    <td>39</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Atomera</td>
+                    <td data-order="2024-09-25">25, September 2024</td>
+                    <td style="color: limegreen;">165.9%</td>
+                    <td>61</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Avis_Budget_Group</td>
+                    <td data-order="2024-09-10">10, September 2024</td>
+                    <td style="color: limegreen;">61.8%</td>
+                    <td>80</td>
+                </tr>
+                
+                <tr class="">
+                    <td>B&G_Foods</td>
+                    <td data-order="2024-11-28">28, November 2024</td>
+                    <td style="color: limegreen;">2.8%</td>
+                    <td>4</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Bakkt</td>
+                    <td data-order="2024-10-01">01, October 2024</td>
+                    <td style="color: limegreen;">251.2%</td>
+                    <td>50</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Big_5_Sporting_Goods_Corporation</td>
+                    <td data-order="2024-09-09">09, September 2024</td>
+                    <td style="color: limegreen;">11.3%</td>
+                    <td>39</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Blue_Bird_Corporation</td>
+                    <td data-order="2024-10-30">30, October 2024</td>
+                    <td style="color: limegreen;">1.5%</td>
+                    <td>5</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Bluebird_bio</td>
+                    <td data-order="2024-11-14">14, November 2024</td>
+                    <td style="color: limegreen;">105.6%</td>
+                    <td>20</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Braze,_Inc.</td>
+                    <td data-order="2024-10-17">17, October 2024</td>
+                    <td style="color: limegreen;">39.5%</td>
+                    <td>48</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Burberry</td>
+                    <td data-order="2024-09-10">10, September 2024</td>
+                    <td style="color: limegreen;">62.1%</td>
+                    <td>77</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Canadian_Solar</td>
+                    <td data-order="2024-11-15">15, November 2024</td>
+                    <td style="color: limegreen;">18.9%</td>
+                    <td>10</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Canoo</td>
+                    <td data-order="2024-09-24">24, September 2024</td>
+                    <td style="color: limegreen;">13.2%</td>
+                    <td>3</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Canopy_Growth</td>
+                    <td data-order="2024-10-15">15, October 2024</td>
+                    <td style="color: limegreen;">35.4%</td>
+                    <td>21</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Canopy_Growth_Corporation</td>
+                    <td data-order="2024-11-18">18, November 2024</td>
+                    <td style="color: limegreen;">9.5%</td>
+                    <td>7</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>CarParts.com</td>
+                    <td data-order="2024-09-18">18, September 2024</td>
+                    <td style="color: limegreen;">33.3%</td>
+                    <td>65</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Cassava_Sciences</td>
+                    <td data-order="2024-11-26">26, November 2024</td>
+                    <td style="color: limegreen;">3.9%</td>
+                    <td>1</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Cato_Corporation</td>
+                    <td data-order="2024-11-22">22, November 2024</td>
+                    <td style="color: red;">-2.0%</td>
+                    <td>1</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Cel-Sci_Corporation</td>
+                    <td data-order="2024-12-03">03, December 2024</td>
+                    <td style="color: red;">-6.6%</td>
+                    <td>1</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Cerence</td>
+                    <td data-order="2024-10-15">15, October 2024</td>
+                    <td style="color: limegreen;">149.0%</td>
+                    <td>48</td>
+                </tr>
+                
+                <tr class="">
+                    <td>ChargePoint</td>
+                    <td data-order="2024-11-20">20, November 2024</td>
+                    <td style="color: limegreen;">14.7%</td>
+                    <td>5</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Chegg</td>
+                    <td data-order="2024-11-13">13, November 2024</td>
+                    <td style="color: limegreen;">62.0%</td>
+                    <td>21</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Constellium</td>
+                    <td data-order="2024-10-24">24, October 2024</td>
+                    <td style="color: limegreen;">15.6%</td>
+                    <td>32</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>DBV_Technologies</td>
+                    <td data-order="2024-10-23">23, October 2024</td>
+                    <td style="color: limegreen;">525.0%</td>
+                    <td>41</td>
+                </tr>
+                
+                <tr class="">
+                    <td>DLocal</td>
+                    <td data-order="2024-11-14">14, November 2024</td>
+                    <td style="color: limegreen;">13.8%</td>
+                    <td>18</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Designer_Brands</td>
+                    <td data-order="2024-09-11">11, September 2024</td>
+                    <td style="color: limegreen;">43.6%</td>
+                    <td>19</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Diageo</td>
+                    <td data-order="2024-09-20">20, September 2024</td>
+                    <td style="color: limegreen;">6.4%</td>
+                    <td>7</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Direct_Line_Group</td>
+                    <td data-order="2024-11-27">27, November 2024</td>
+                    <td style="color: limegreen;">49.2%</td>
+                    <td>7</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Douglas_Elliman</td>
+                    <td data-order="2024-10-23">23, October 2024</td>
+                    <td style="color: limegreen;">69.8%</td>
+                    <td>33</td>
+                </tr>
+                
+                <tr class="">
+                    <td>EHealthInsurance</td>
+                    <td data-order="2024-11-17">17, November 2024</td>
+                    <td style="color: limegreen;">15.9%</td>
+                    <td>16</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>EPAM_Systems</td>
+                    <td data-order="2024-10-07">07, October 2024</td>
+                    <td style="color: limegreen;">29.1%</td>
+                    <td>49</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Editas_Medicine</td>
+                    <td data-order="2024-11-27">27, November 2024</td>
+                    <td style="color: limegreen;">1.8%</td>
+                    <td>2</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Enphase_Energy</td>
+                    <td data-order="2024-11-12">12, November 2024</td>
+                    <td style="color: limegreen;">25.0%</td>
+                    <td>20</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Faraday_Future</td>
+                    <td data-order="2024-10-04">04, October 2024</td>
+                    <td style="color: limegreen;">1.9%</td>
+                    <td>6</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Fox_Factory</td>
+                    <td data-order="2024-11-20">20, November 2024</td>
+                    <td style="color: limegreen;">4.8%</td>
+                    <td>5</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>FuelCell_Energy</td>
+                    <td data-order="2024-11-12">12, November 2024</td>
+                    <td style="color: limegreen;">108.2%</td>
+                    <td>17</td>
+                </tr>
+                
+                <tr class="">
+                    <td>GSK_plc</td>
+                    <td data-order="2024-11-11">11, November 2024</td>
+                    <td style="color: red;">-2.3%</td>
+                    <td>1</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Gaotu_Techedu</td>
+                    <td data-order="2024-09-15">15, September 2024</td>
+                    <td style="color: limegreen;">63.3%</td>
+                    <td>22</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Genelux_Corporation</td>
+                    <td data-order="2024-09-25">25, September 2024</td>
+                    <td style="color: limegreen;">68.2%</td>
+                    <td>35</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Genuine_Parts_Company</td>
+                    <td data-order="2024-10-22">22, October 2024</td>
+                    <td style="color: limegreen;">14.5%</td>
+                    <td>34</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Getty_Images</td>
+                    <td data-order="2024-11-20">20, November 2024</td>
+                    <td style="color: limegreen;">5.2%</td>
+                    <td>12</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Ginkgo_Bioworks</td>
+                    <td data-order="2024-11-21">21, November 2024</td>
+                    <td style="color: limegreen;">58.0%</td>
+                    <td>13</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Globalstar</td>
+                    <td data-order="2024-10-09">09, October 2024</td>
+                    <td style="color: limegreen;">73.6%</td>
+                    <td>55</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>GreenPower_Motor_Company</td>
+                    <td data-order="2024-11-20">20, November 2024</td>
+                    <td style="color: limegreen;">28.7%</td>
+                    <td>7</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Green_Plains</td>
+                    <td data-order="2024-11-26">26, November 2024</td>
+                    <td style="color: limegreen;">6.5%</td>
+                    <td>6</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Gritstone_bio</td>
+                    <td data-order="2024-10-29">29, October 2024</td>
+                    <td style="color: limegreen;">66.8%</td>
+                    <td>29</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Guess_(company)</td>
+                    <td data-order="2024-11-20">20, November 2024</td>
+                    <td style="color: limegreen;">11.4%</td>
+                    <td>5</td>
+                </tr>
+                
+                <tr class="">
+                    <td>HF_Sinclair</td>
+                    <td data-order="2024-11-28">28, November 2024</td>
+                    <td style="color: limegreen;">1.5%</td>
+                    <td>4</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Harmonic_Inc.</td>
+                    <td data-order="2024-10-29">29, October 2024</td>
+                    <td style="color: limegreen;">16.8%</td>
+                    <td>36</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Horizon_Therapeutics</td>
+                    <td data-order="2024-10-21">21, October 2024</td>
+                    <td style="color: limegreen;">88.4%</td>
+                    <td>17</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Hugo_Boss</td>
+                    <td data-order="2024-09-08">08, September 2024</td>
+                    <td style="color: limegreen;">24.8%</td>
+                    <td>60</td>
+                </tr>
+                
+                <tr class="">
+                    <td>ICON_PLC</td>
+                    <td data-order="2024-10-25">25, October 2024</td>
+                    <td style="color: limegreen;">5.4%</td>
+                    <td>4</td>
+                </tr>
+                
+                <tr class="">
+                    <td>IDEX_Biometrics</td>
+                    <td data-order="2024-11-26">26, November 2024</td>
+                    <td style="color: limegreen;">19.9%</td>
+                    <td>8</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>IonQ</td>
+                    <td data-order="2024-09-30">30, September 2024</td>
+                    <td style="color: limegreen;">317.6%</td>
+                    <td>60</td>
+                </tr>
+                
+                <tr class="">
+                    <td>JPMorgan_Chase</td>
+                    <td data-order="2024-09-26">26, September 2024</td>
+                    <td style="color: limegreen;">19.3%</td>
+                    <td>60</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Joby_Aviation</td>
+                    <td data-order="2024-10-03">03, October 2024</td>
+                    <td style="color: limegreen;">59.5%</td>
+                    <td>57</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Johnson_&_Johnson</td>
+                    <td data-order="2024-10-07">07, October 2024</td>
+                    <td style="color: limegreen;">4.0%</td>
+                    <td>16</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Jumia</td>
+                    <td data-order="2024-09-12">12, September 2024</td>
+                    <td style="color: limegreen;">28.4%</td>
+                    <td>22</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Keisei_Electric_Railway</td>
+                    <td data-order="2024-10-30">30, October 2024</td>
+                    <td style="color: limegreen;">18.4%</td>
+                    <td>28</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Kering</td>
+                    <td data-order="2024-09-10">10, September 2024</td>
+                    <td style="color: limegreen;">16.4%</td>
+                    <td>17</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Kingsoft</td>
+                    <td data-order="2024-09-12">12, September 2024</td>
+                    <td style="color: limegreen;">270.9%</td>
+                    <td>83</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Lamb_Weston</td>
+                    <td data-order="2024-10-08">08, October 2024</td>
+                    <td style="color: limegreen;">14.2%</td>
+                    <td>31</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Leslie's</td>
+                    <td data-order="2024-10-23">23, October 2024</td>
+                    <td style="color: limegreen;">27.6%</td>
+                    <td>33</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Levi_Strauss_&_Co.</td>
+                    <td data-order="2024-11-08">08, November 2024</td>
+                    <td style="color: limegreen;">9.2%</td>
+                    <td>26</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Lexicon_Pharmaceuticals</td>
+                    <td data-order="2024-11-19">19, November 2024</td>
+                    <td style="color: red;">-2.3%</td>
+                    <td>3</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Li_Auto</td>
+                    <td data-order="2024-11-19">19, November 2024</td>
+                    <td style="color: limegreen;">2.1%</td>
+                    <td>10</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Life_Technologies</td>
+                    <td data-order="2024-09-11">11, September 2024</td>
+                    <td style="color: limegreen;">6.3%</td>
+                    <td>9</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Lion_Electric_Company</td>
+                    <td data-order="2024-11-29">29, November 2024</td>
+                    <td style="color: limegreen;">110.8%</td>
+                    <td>5</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>List_of_pharmaceutical_compound_number_prefixes</td>
+                    <td data-order="2024-09-11">11, September 2024</td>
+                    <td style="color: limegreen;">34.7%</td>
+                    <td>50</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Lithium</td>
+                    <td data-order="2024-09-18">18, September 2024</td>
+                    <td style="color: limegreen;">34.2%</td>
+                    <td>40</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Luminar_Technologies</td>
+                    <td data-order="2024-12-03">03, December 2024</td>
+                    <td style="color: limegreen;">1.9%</td>
+                    <td>1</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>MINISO</td>
+                    <td data-order="2024-09-24">24, September 2024</td>
+                    <td style="color: limegreen;">86.7%</td>
+                    <td>70</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Medifast</td>
+                    <td data-order="2024-10-29">29, October 2024</td>
+                    <td style="color: limegreen;">10.2%</td>
+                    <td>7</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Microchip_Technology</td>
+                    <td data-order="2024-10-01">01, October 2024</td>
+                    <td style="color: limegreen;">2.0%</td>
+                    <td>28</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Microvast</td>
+                    <td data-order="2024-09-11">11, September 2024</td>
+                    <td style="color: limegreen;">683.3%</td>
+                    <td>83</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Moderna</td>
+                    <td data-order="2024-11-15">15, November 2024</td>
+                    <td style="color: limegreen;">20.1%</td>
+                    <td>17</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Mogo_(company)</td>
+                    <td data-order="2024-10-29">29, October 2024</td>
+                    <td style="color: limegreen;">67.0%</td>
+                    <td>34</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Monolithic_Power_Systems</td>
+                    <td data-order="2024-11-11">11, November 2024</td>
+                    <td style="color: red;">-0.5%</td>
+                    <td>1</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Neste</td>
+                    <td data-order="2024-11-26">26, November 2024</td>
+                    <td style="color: limegreen;">2.4%</td>
+                    <td>3</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>NextEra_Energy_Partners</td>
+                    <td data-order="2024-11-19">19, November 2024</td>
+                    <td style="color: limegreen;">23.9%</td>
+                    <td>13</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Novo_Nordisk</td>
+                    <td data-order="2024-09-24">24, September 2024</td>
+                    <td style="color: limegreen;">1.2%</td>
+                    <td>1</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Nu_Skin</td>
+                    <td data-order="2024-09-14">14, September 2024</td>
+                    <td style="color: limegreen;">4.4%</td>
+                    <td>65</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Nu_Skin_Enterprises</td>
+                    <td data-order="2024-09-10">10, September 2024</td>
+                    <td style="color: limegreen;">10.6%</td>
+                    <td>69</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Oatly</td>
+                    <td data-order="2024-11-05">05, November 2024</td>
+                    <td style="color: limegreen;">12.9%</td>
+                    <td>1</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Odyssey_Marine_Exploration</td>
+                    <td data-order="2024-09-17">17, September 2024</td>
+                    <td style="color: limegreen;">182.3%</td>
+                    <td>1</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Oncolytics_Biotech</td>
+                    <td data-order="2024-10-02">02, October 2024</td>
+                    <td style="color: limegreen;">64.7%</td>
+                    <td>5</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Oscar_Health</td>
+                    <td data-order="2024-11-13">13, November 2024</td>
+                    <td style="color: limegreen;">36.7%</td>
+                    <td>19</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Otello_Corporation</td>
+                    <td data-order="2024-11-19">19, November 2024</td>
+                    <td style="color: limegreen;">25.6%</td>
+                    <td>3</td>
+                </tr>
+                
+                <tr class="">
+                    <td>POSCO</td>
+                    <td data-order="2024-10-30">30, October 2024</td>
+                    <td style="color: limegreen;">2.0%</td>
+                    <td>5</td>
+                </tr>
+                
+                <tr class="">
+                    <td>PagerDuty</td>
+                    <td data-order="2024-09-20">20, September 2024</td>
+                    <td style="color: limegreen;">19.9%</td>
+                    <td>73</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Par_Pacific_Holdings</td>
+                    <td data-order="2024-10-10">10, October 2024</td>
+                    <td style="color: limegreen;">2.2%</td>
+                    <td>1</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Petco</td>
+                    <td data-order="2024-10-23">23, October 2024</td>
+                    <td style="color: limegreen;">12.4%</td>
+                    <td>41</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Phunware</td>
+                    <td data-order="2024-09-12">12, September 2024</td>
+                    <td style="color: limegreen;">327.8%</td>
+                    <td>41</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Piedmont_Lithium</td>
+                    <td data-order="2024-10-01">01, October 2024</td>
+                    <td style="color: limegreen;">65.4%</td>
+                    <td>10</td>
+                </tr>
+                
+                <tr class="">
+                    <td>ProSiebenSat.1_Media</td>
+                    <td data-order="2024-11-27">27, November 2024</td>
+                    <td style="color: limegreen;">14.5%</td>
+                    <td>7</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Pyxis</td>
+                    <td data-order="2024-11-26">26, November 2024</td>
+                    <td style="color: limegreen;">13.6%</td>
+                    <td>3</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Qorvo</td>
+                    <td data-order="2024-10-30">30, October 2024</td>
+                    <td style="color: red;">-0.2%</td>
+                    <td>7</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Qurate_Retail_Group</td>
+                    <td data-order="2024-11-20">20, November 2024</td>
+                    <td style="color: limegreen;">30.6%</td>
+                    <td>9</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Red_Robin</td>
+                    <td data-order="2024-09-11">11, September 2024</td>
+                    <td style="color: limegreen;">111.0%</td>
+                    <td>40</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Rentokil_Initial</td>
+                    <td data-order="2024-09-11">11, September 2024</td>
+                    <td style="color: limegreen;">8.6%</td>
+                    <td>75</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Rigetti_Computing</td>
+                    <td data-order="2024-09-25">25, September 2024</td>
+                    <td style="color: limegreen;">324.3%</td>
+                    <td>69</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Rigetti_Computing</td>
+                    <td data-order="2024-10-10">10, October 2024</td>
+                    <td style="color: limegreen;">1066.7%</td>
+                    <td>46</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Roblox_Corporation</td>
+                    <td data-order="2024-10-08">08, October 2024</td>
+                    <td style="color: limegreen;">34.7%</td>
+                    <td>34</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Rosanna_Pansino</td>
+                    <td data-order="2024-10-29">29, October 2024</td>
+                    <td style="color: limegreen;">69.9%</td>
+                    <td>31</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Safe</td>
+                    <td data-order="2024-11-26">26, November 2024</td>
+                    <td style="color: limegreen;">68.5%</td>
+                    <td>6</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Seabridge_Gold</td>
+                    <td data-order="2024-11-26">26, November 2024</td>
+                    <td style="color: limegreen;">1.1%</td>
+                    <td>3</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Secoo</td>
+                    <td data-order="2024-10-21">21, October 2024</td>
+                    <td style="color: limegreen;">200.0%</td>
+                    <td>22</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>ServiceNow</td>
+                    <td data-order="2024-10-30">30, October 2024</td>
+                    <td style="color: limegreen;">30.8%</td>
+                    <td>34</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>SolarEdge</td>
+                    <td data-order="2024-11-19">19, November 2024</td>
+                    <td style="color: limegreen;">51.8%</td>
+                    <td>13</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Stellantis</td>
+                    <td data-order="2024-11-26">26, November 2024</td>
+                    <td style="color: limegreen;">4.7%</td>
+                    <td>3</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Sunrun</td>
+                    <td data-order="2024-11-19">19, November 2024</td>
+                    <td style="color: limegreen;">20.2%</td>
+                    <td>13</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Supermicro</td>
+                    <td data-order="2024-11-01">01, November 2024</td>
+                    <td style="color: limegreen;">61.2%</td>
+                    <td>31</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Teladoc_Health</td>
+                    <td data-order="2024-09-09">09, September 2024</td>
+                    <td style="color: limegreen;">67.2%</td>
+                    <td>77</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>The_Children's_Place</td>
+                    <td data-order="2024-09-11">11, September 2024</td>
+                    <td style="color: limegreen;">93.2%</td>
+                    <td>12</td>
+                </tr>
+                
+                <tr class="">
+                    <td>The_Mosaic_Company</td>
+                    <td data-order="2024-10-09">09, October 2024</td>
+                    <td style="color: limegreen;">12.1%</td>
+                    <td>29</td>
+                </tr>
+                
+                <tr class="">
+                    <td>ThyssenKrupp</td>
+                    <td data-order="2024-11-18">18, November 2024</td>
+                    <td style="color: limegreen;">19.1%</td>
+                    <td>16</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Tonix_Pharmaceuticals</td>
+                    <td data-order="2024-09-11">11, September 2024</td>
+                    <td style="color: limegreen;">33.3%</td>
+                    <td>71</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Torrid_(clothing_retailer)</td>
+                    <td data-order="2024-10-01">01, October 2024</td>
+                    <td style="color: limegreen;">19.3%</td>
+                    <td>63</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Umicore</td>
+                    <td data-order="2024-11-28">28, November 2024</td>
+                    <td style="color: limegreen;">7.5%</td>
+                    <td>6</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>UnitedHealth_Group</td>
+                    <td data-order="2024-10-10">10, October 2024</td>
+                    <td style="color: limegreen;">26.2%</td>
+                    <td>55</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Urban_One</td>
+                    <td data-order="2024-10-30">30, October 2024</td>
+                    <td style="color: limegreen;">10.2%</td>
+                    <td>13</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Vicinity_Motor_Corp.</td>
+                    <td data-order="2024-11-11">11, November 2024</td>
+                    <td style="color: limegreen;">133.3%</td>
+                    <td>15</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>VinFast</td>
+                    <td data-order="2024-10-01">01, October 2024</td>
+                    <td style="color: limegreen;">37.0%</td>
+                    <td>64</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Virgin_Galactic</td>
+                    <td data-order="2024-10-01">01, October 2024</td>
+                    <td style="color: limegreen;">32.5%</td>
+                    <td>27</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Visa_Inc.</td>
+                    <td data-order="2024-09-25">25, September 2024</td>
+                    <td style="color: limegreen;">17.4%</td>
+                    <td>68</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Volkswagen_Group</td>
+                    <td data-order="2024-09-10">10, September 2024</td>
+                    <td style="color: limegreen;">12.1%</td>
+                    <td>17</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Vuzix</td>
+                    <td data-order="2024-09-18">18, September 2024</td>
+                    <td style="color: limegreen;">143.5%</td>
+                    <td>77</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Walgreens_Boots_Alliance</td>
+                    <td data-order="2024-10-15">15, October 2024</td>
+                    <td style="color: limegreen;">6.2%</td>
+                    <td>1</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Wallbox</td>
+                    <td data-order="2024-11-19">19, November 2024</td>
+                    <td style="color: limegreen;">19.2%</td>
+                    <td>13</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>WiSA</td>
+                    <td data-order="2024-10-08">08, October 2024</td>
+                    <td style="color: limegreen;">31.1%</td>
+                    <td>42</td>
+                </tr>
+                
+                <tr class="">
+                    <td>Xerox</td>
+                    <td data-order="2024-09-22">22, September 2024</td>
+                    <td style="color: limegreen;">7.9%</td>
+                    <td>25</td>
+                </tr>
+                
+                <tr class="highlight">
+                    <td>Zeta_Global</td>
+                    <td data-order="2024-11-14">14, November 2024</td>
+                    <td style="color: limegreen;">51.5%</td>
+                    <td>20</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#stocksTable').DataTable({
+                "paging": true,
+                "searching": true,
+                "info": true,
+                "order": [[1, "desc"]],
+                "pageLength": 30
+            });
+        });
+    </script>
+</body>
+</html>
