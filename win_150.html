@@ -1,0 +1,88 @@
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #1e1e2f;
+        }
+        .card {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid limegreen; /* Limegreen border */
+            border-radius: 8px;
+            background-color: #28293d;
+            color: #ffffff; /* White text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .header {
+            font-size: 26px;
+            color: #FF5700;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .title {
+            font-size: 24px;
+            color: #FF5700; /* Orange for company name */
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .profit {
+            font-size: 24px;
+            font-weight: bold;
+            color: limegreen; /* Limegreen profit */
+        }
+        .details {
+            font-size: 24px;
+            color: #FF5700; /* Orange for days */
+            margin-bottom: 5px;
+        }
+        .date-section {
+            font-size: 22px;
+            color: limegreen;
+            margin-bottom: 10px;
+        }
+        .recommendation {
+            font-size: 20px;
+            color: white;
+        }
+        .chart {
+            margin-top: 10px;
+            width: 100%; /* Responsive chart */
+        }
+
+        /* Mobile screen adjustments */
+        @media (max-width: 600px) {
+            .card {
+                max-width: 95%;
+                padding: 5px;
+            }
+            .title, .profit, .details, .date-section, .recommendation {
+                font-size: 16px; /* Smaller text for mobile */
+            }
+            .header {
+                font-size: 18px; /* Smaller header for mobile */
+            }
+            .chart {
+                height: 90%; /* Smaller chart height for mobile */
+                width: 100%; /* Responsive width */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">Designer_Brands</div>
+        <div class="recommendation">Hit a <span class="profit">43.6 % </span> profit in <span class="details">19</span> days.</div>
+        <div class="recommendation">after UpriseStocks listed it on:</div>
+        <div class="date-section">11, September 2024</div>
+        <div class="chart">
+            
+        </div>
+    </div>
+</body>
+</html>
